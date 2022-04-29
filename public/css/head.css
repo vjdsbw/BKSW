@@ -1,0 +1,73 @@
+
+body {
+font-family: "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "宋体", simsun, sans-serif;
+font-size: 16px;
+background: #fff;
+color: #333333;
+min-width: 320px;
+overflow-x: hidden;
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+.navbar{
+  width: 100%;
+  height: 110px;
+  background-color:rgba(255, 255, 255, 0.7);
+ position: absolute;
+ z-index: 1;
+ animation: translateUL 0.5s linear 0s ;
+}
+.navbar.affix {
+    position: fixed;
+top: 0;
+
+}
+.left{
+  float: left;
+  margin-top: 20px;
+  margin-left: 50px;
+
+}
+.left li{
+  margin-left: 10px;
+}
+.logo{
+  width: 220px;
+  height: 110px;
+  border-radius: 50%/50%;
+  background-color:rgba(255, 255, 255, 0.7);
+  float: left;
+  margin-top: 30px;
+  margin-left: 40px;
+  
+}
+.logo img{
+  margin-left: 20px;
+}
+.right{
+  float: left;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+.right li{
+  margin-left: 12px;
+}
+.nav_en {
+font-size: 12px;
+margin: 0.1rem 0 0.1rem 0;
+color: #888888;
+text-align: center;
+}
+
+
+@keyframes translateUL {
+    from {
+        transform: translateY(-110px);
+    }
+ /* 这里将位置从0跳到-882，即一个div的宽度，但需要一直要在div内显示图片，所以将ul的宽度设为两倍div，并且再添加一组图片进去 */
+    to {
+        transform: translateY(0px);
+    }
+}
