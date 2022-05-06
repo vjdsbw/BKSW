@@ -53,7 +53,7 @@ img {
     bottom: -0.83rem;
     position: absolute;
     padding-top: 0.36rem;
-    z-index: 999;
+    z-index: 0;
 }
 
 .container {
@@ -82,6 +82,10 @@ img {
     float: left;
 }
 
+.honor_title {
+    display: none;
+}
+
 a {
     color: #1baadb;
 }
@@ -99,6 +103,9 @@ a, a:link, a:hover, a:visited, a:active {
     margin-top: 0.25rem;
     color: #fff;
     padding: 0 0.12rem;
+}
+.pro_nav .pro_nav_tab a.active, .pro_nav .pro_nav_tab a:hover {
+    background: url("/public/img/base/bg_line.png") repeat-x;
 }
 
 .honor_content, .recruit_box, .contact_content {
@@ -210,13 +217,18 @@ ul {
         width: 100%;
         padding: 0 0.1rem;
     } 
-    
+    .pro_nav .pro_nav_title {
+        display: none;
+    } 
     .pro_nav .pro_nav_tab {
         text-align: center;
         width: 100%;
         position: relative;
         top: -0.2rem;
     }  
+    .honor_title {
+        display: block;
+    }
     .pro_nav .pro_nav_tab a {
         margin-top: 0;
         font-size: 16px;
