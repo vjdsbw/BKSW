@@ -9,4 +9,8 @@ router.get("/index", (req, res) => {
     res.render("index.html");
 })
 
+router.get("/index.php/images/Corporatestyle", (req, res) => {
+    res.render("base.html");
+})
+
 module.exports = router;
