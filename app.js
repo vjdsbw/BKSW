@@ -37,12 +37,14 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.engine('html', require('express-art-template'));
 
+
 app.use("/",index)
 app.use("/about",about)
 app.use("/product",product)
 app.use("/base",base)
 app.use("/news",news)
 app.use("/contact",contact)
+
 
 
 

@@ -21,10 +21,6 @@ router.get("/index.php/product/product", (req, res) => {
     res.render("product.html");
 })
 
-router.get("/index.php/images/news", (req, res) => {
-    res.render("news.html");
-})
-
 router.get("/index.php/images/contact", (req, res) => {
     res.render("contact.html");
 })
