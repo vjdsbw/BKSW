@@ -10,7 +10,7 @@ ul{
 .pro_nav{
     width: 100%;
     height: auto;
-    background: url("../img/nav_bg.png") no-repeat;
+    background: url("/public/img/nav_bg.png") no-repeat;
     background-size: cover;
     left: 0;
     top: 357px;
@@ -45,7 +45,7 @@ ul{
 }
 .pro_nav_tab a:hover {
 
-    background: url("../img/bg_line.png") repeat-x;
+    background: url("/public/img/bg_line.png") repeat-x;
 }
  .pro_nav_tab a {
     display: inline-block; 
