@@ -4,10 +4,6 @@
     margin: 0;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-img {
-    border: none;
-    vertical-align: middle;
-}
 element.style {
     visibility : visible;
     animation-name: fadeInUp;
@@ -31,16 +27,7 @@ dd {
     padding    : 0;
     font-weight: normal;
 }
-@media (max-width:500px){
-    body{
-        font-size: 12px;
-    }
-}
-@media (min-width:768px) and (max-width:991px) {
-    body{
-        font-size: 14px;
-    }
-}
+
 .pro_content_banner {
     position: relative;
 }
@@ -55,120 +42,37 @@ img {
 .pro_banner img {
     width: 100%;
 }
-.pro_nav {
-    width: 100%;
-    height:  14.375rem;
-    background: url("/public/img/base/nav_bg.png") center center no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-    left: 0;
-    bottom: -7.1875rem;
-    position: absolute;
-    padding-top: 0.36rem;
-    z-index: 999;
-}
+
 .container {
     margin: 0 auto;
 }
-@media (min-width:992px) and (max-width:1199px) {
-    .container{
-        width: 970px;
-    }
-}
-@media (max-width:767px) {
-    .container{
-        width: 100%;
-        padding: 0 0.1rem;
-    }
-}
-@media (max-width: 767px){
-    .pro_nav {
-        background: #19b95f;
-        height:6rem;
-        padding-top: 0;
-        bottom: -6rem;
-    }
-}
 
+.pro_nav {
+    width: 100%;
+    height: 1.65rem;
+    background: url("/public/img/nav_bg.png") center center no-repeat;
+    background-size: auto;
+    -webkit-background-size: cover;
+    background-size: cover;
+    left: 0;
+    bottom: -0.83rem;
+    position: absolute;
+    padding-top: 0.36rem;
+    z-index: 0;
+}
 .pro_nav .pro_nav_title {
     padding: 0 0 0 0.94rem;
     float: left;
-    width: 26.25rem;
+    width: 5rem;
     color: #fff;
     font-size: 30px;
-    margin-left: 14rem;
-}
-@media (min-width:992px) and (max-width:1199px) {
-    .pro_nav .pro_nav_title {
-        padding: 0;
-        margin: 0;
-        width: 26.25rem; 
-    }
-}
-@media (min-width:767px) and (max-width:992px) {
-    .pro_nav .pro_nav_title {
-        padding: 0;
-        margin: 0;
-        font-size: 22px;
-        width: 26.25rem; 
-    }
-}
-@media (max-width:767px) {
-    .pro_nav .pro_nav_title {
-        display: none;
-    }
-}
-.pro_nav .pro_nav_title .en {
-    font-size: 36px;
-    font-weight: bold;
-    font-style: italic;
-}
-@media (min-width:768px) and (max-width:992px) {
-    .pro_nav .pro_nav_title .en{
-        padding-left: 1.5rem;
-        font-size: 22px;
-    }
-}
-.pro_nav .pro_nav_title .name {
-    padding-left: 1.5rem;
-    margin-left: 11rem;
-}
-@media (min-width:992px) and (max-width:1199px) {
-    .pro_nav .pro_nav_title .name{
-        margin-left: 12rem;
-    }
-}
-@media (min-width:767px) and (max-width:992px) {
-    .pro_nav .pro_nav_title .name{
-        font-size: 22px;
-        margin-left: 4rem;
-    }
-}
-@media (max-width:767px) {
-    .pro_nav .pro_nav_tab {
-        text-align: center;
-        width: 100%;
-        position: relative;
-        bottom: 8rem;
-        left: -10rem;
-        z-index: 20000;
-    }
-}
-@media (max-width:767px) {
-    .pro_nav .pro_nav_tab a{
-        margin-top: 0;
-        font-size: 16px;
-        height: 0.8rem;
-        line-height: 1rem;
-    }
-}
+  }
+
 .pro_nav .pro_nav_tab a:hover{
    text-decoration: underline;
 }
 .pro_nav .pro_nav_tab {
     float: left;
-    margin-top: 10rem;
-    margin-left: 13rem;
 }
 a {
     color: #1baadb;
@@ -180,6 +84,9 @@ a, a:link, a:hover, a:visited, a:active {
     -webkit-tap-highlight-color: transparent;
     outline: none;
 }
+.pro_nav .pro_nav_tab {
+    float: left;
+}
 .pro_nav .pro_nav_tab a {
     display: inline-block;
     height: 1.04rem;
@@ -189,6 +96,19 @@ a, a:link, a:hover, a:visited, a:active {
     padding: 0 0.12rem;
     text-decoration: none;
 }
+.pro_nav .pro_nav_title .en {
+    font-size: 36px;
+    font-weight: bold;
+    font-style: italic;
+}
+.pro_nav .pro_nav_title .name {
+    padding-left: 1.5rem;
+}
+
+.pro_nav .pro_nav_tab a.active, .pro_nav .pro_nav_tab a:hover {
+    background: url("/public/img/bg_line.png") repeat-x;
+}
+
 
 .main{
     margin: 0 auto;
@@ -197,24 +117,6 @@ a, a:link, a:hover, a:visited, a:active {
     width: 1190px;
     background-position: center bottom;
     margin-top: 120px;
-}
-@media (min-width: 992px) and (max-width: 1199px){
-    .main {
-        width: 100%;
-        padding: 0 0.1rem;
-    }
-}
-@media (min-width: 767px) and (max-width: 992px){
-    .main {
-        width: 100%;
-        padding: 0 0.1rem;
-    }
-}
-@media (max-width: 767px){
-    .main {
-        width: 100%;
-        padding: 0 0.1rem;
-    }
 }
 .main .main_img{
     margin: auto;
@@ -226,3 +128,94 @@ a, a:link, a:hover, a:visited, a:active {
     height: 294px;
     vertical-align: middle;
 }
+
+
+@media (max-width:767px) {
+    .container{
+        width: 100%;
+        padding: 0 0.1rem;
+    }
+    .pro_nav {
+        background: #19b95f;
+        height:0.6rem;
+        padding-top: 0;
+        bottom: -0.6rem;
+    }
+    .pro_nav .pro_nav_tab {
+        text-align: center;
+        width: 100%;
+        position: relative;
+        top: -0.2rem;
+    }
+    .pro_nav .pro_nav_tab a{
+        margin-top: 0;
+        font-size: 16px;
+        height: 0.8rem;
+        line-height: 1rem;
+    }
+    .pro_nav .pro_nav_title {
+        display: none;
+    }
+    .main {
+        width: 100%;
+        padding: 0 0.1rem;
+    }
+}
+@media (max-width: 479px) {
+ 
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  
+}
+@media (min-width:768px) and (max-width:992px) {
+    .pro_nav .pro_nav_title .en {
+        font-size: 30px;
+    }
+    .pro_nav .pro_nav_title {
+        padding: 0;
+        width: 3.2rem;
+        margin-top: 0.14rem;
+    }
+    .main {
+        width: 100%;
+        padding: 0 0.1rem;
+    }
+    .pro_nav .pro_nav_title .name {
+        font-size: 22px;
+        padding-left: 0.5rem;
+    }
+    .pro_nav .pro_nav_title .name {
+        font-size: 22px;
+        padding-left: 0.5rem;
+    }
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+    .container{
+        width: 970px;
+    }
+    .pro_nav .pro_nav_title .name{
+        font-size: 22px;
+        margin-left: 0.5rem;
+    }
+    .pro_nav .pro_nav_title {
+        padding: 0;
+        width: 4.2rem;
+    }
+    .main {
+        width: 100%;
+        padding: 0 0.1rem;
+    }
+}
+
+
+@media (min-width: 1200px){
+    .container {
+        width: 1170px;
+    }
+}
+
+

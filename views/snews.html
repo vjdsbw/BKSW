@@ -1,6 +1,8 @@
 {{extend './layout/center.html'}}
 
-{{ block "style"}} {{/block}} 
+{{ block "style"}} 
+<link rel="stylesheet" href="/public/css/news.css">
+{{/block}} 
 
 {{block "content"}}
     <div class="products_content">
@@ -16,8 +18,8 @@
               <p class="name" style="margin-top: 40px;">企业新闻</p>
             </div>
             <div class="pro_nav_tab">
-              <a href="/cnews" class="">企业新闻</a>
-              <a href="/hnews" class="">行业资讯</a>
+              <a href="/news/cnews" class="">企业新闻</a>
+              <a href="/news/hnews" class="">行业资讯</a>
             </div>
           </div>
         </div>
@@ -33,7 +35,7 @@
                     </div>
                 </div>
                 <div class="new_detail_con">
-                    <p><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 14px;">
+                    <p><span >
                         &nbsp; &nbsp; &nbsp; &nbsp; {{mes.content}}
                     </span></p>                </div>
             </div>
@@ -43,10 +45,10 @@
     <div class="news_detail_bot">
         <div class="container clearfix">
             <div class="news_detail_fy">
-              {{if mesa[id-2]}}<a class="page-link text-truncate" href="/snews?id={{id-1}}">上一篇： {{mesa[id-2].title}} {{else}}<span style="font-size: 14px;color: #666;">上一篇： 暂无 </span>{{/if}} </a> 
-               {{if mesa[id]}} <a class="page-link pull-xs-right text-truncate"  href="/snews?id={{id-(-1)}}">下一篇：  {{mesa[id].title}}{{else}}<span style="font-size: 14px;color: #666;">下一篇： 暂无</span>{{/if}}</a>           </div>
+              {{if mesa[id-2]}}<a class="page-link text-truncate" href="/news/snews?id={{id-1}}">上一篇： {{mesa[id-2].title}} {{else}}<span style="font-size: 14px;color: #666;">上一篇： 暂无 </span>{{/if}} </a> 
+               {{if mesa[id]}} <a class="page-link pull-xs-right text-truncate"  href="/news/snews?id={{id-(-1)}}">下一篇：  {{mesa[id].title}}{{else}}<span style="font-size: 14px;color: #666;">下一篇： 暂无</span>{{/if}}</a>           </div>
             <div class="news_detail_share">
-                           <a href="/news" class="back_list"><i class="back_icon"></i>返回列表</a>
+                           <a href="/news/news" class="back_list"><i class="back_icon"></i>返回列表</a>
                                <div class="share_box">
                     <!-- JiaThis Button BEGIN -->
                     <div class="jiathis_style clearfix">

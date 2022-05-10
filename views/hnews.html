@@ -1,5 +1,8 @@
 {{extend './layout/center.html'}} 
-{{ block "style"}} {{/block}}
+{{ block "style"}} 
+
+<link rel="stylesheet" href="/public/css/news.css">
+{{/block}}
 
 
 {{block  "content"}}
@@ -15,8 +18,8 @@
               <p class="name" style="margin-top: 40px;">行业资讯</p>
             </div>
             <div class="pro_nav_tab">
-                <a href="/cnews" class="">企业新闻</a>
-                <a href="/hnews" class="">行业资讯</a>
+                <a href="/news/cnews" class="">企业新闻</a>
+                <a href="/news/hnews" class="">行业资讯</a>
             </div>
           </div>
         </div>
@@ -26,7 +29,7 @@
           <div class="news_content">
             <ul class="news_con_list" id="page_container">
               <li class="news_con_item" style="visibility: visible">
-                <a href="/snews?id=1" class="clearfix">
+                <a href="/news/snews?id=1" class="clearfix">
                   <div class="news_pic">
                     <img
                       src="http://bek.com.cn/public/upload/article/2019/10/25/af370a5796f94b085ebc85c126629872.jpg"
