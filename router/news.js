@@ -5,9 +5,11 @@ const mongoose = require("mongoose")
 const router = express.Router();
 router.get("/news",(req,res)=>{
 
+
     res.render("news.html")
 })
 router.get("/cnews",(req,res)=>{
+
 
     res.render("cnews.html")
 })
