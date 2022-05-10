@@ -20,7 +20,10 @@ overflow-x: hidden;
   height: 110px;
   background-color:rgba(255, 255, 255, 0.9);
  position: absolute;
+
+
  z-index: 2;
+
  animation: translateUL 0.5s linear 0s ;
 }
 .navbar.affix {
