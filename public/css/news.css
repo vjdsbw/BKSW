@@ -122,17 +122,7 @@
     }
 }
 
-<<<<<<< HEAD
-.pro_nav{
-    width: 100%;
-    height: auto;
-    background: url("/public/img/nav_bg.png") no-repeat;
-    background-size: cover;
-    left: 0;
-    top: 357px;
-    position: absolute;
-    z-index: 1;
-=======
+
 
 @media (min-width:768px) and (max-width:991px) {
     .pro_banner{
@@ -260,7 +250,7 @@
         color: #666;
         line-height: 24px;
     }
->>>>>>> jiangnan
+
 }
 
   ul{
@@ -268,22 +258,6 @@
     }
   
 
-<<<<<<< HEAD
-    background: url("/public/img/bg_line.png") repeat-x;
-}
- .pro_nav_tab a {
-    display: inline-block; 
-    height:75px;
-    line-height: 80px;
-    margin-top: 4px;
-    margin-left: 10px;
-    color: #fff;
-    padding: 0 2px;
-    position: relative;
-    top: 50px;
-    left: 400px;
-    text-decoration: none;
-=======
 @media (min-width:992px) {
     .pro_banner{
         width: 100%;
@@ -379,7 +353,7 @@
         width: 800px;
         height: 180px;
         color: #666;
-        padding: 0.26rem 0;
+        padding-top: 10px;
         border-top: 1px dashed #c6c6c6;
         border-bottom: 1px dashed #c6c6c6;
         float: right;
@@ -422,8 +396,7 @@
         color: #666;
         line-height: 20px;
     }
-    
->>>>>>> jiangnan
+
 }
 
 div {
