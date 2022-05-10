@@ -1,0 +1,70 @@
+{{extend './layout/center.html'}}
+
+{{ block "style"}} {{/block}} 
+
+{{block
+    "content"}}
+    <div class="products_content">
+      <!--banner-->
+      <div class="pro_content_banner">
+        <div class="pro_banner">
+          <img src="../public/img/banner.png" alt="" />
+        </div>
+        <div class="pro_nav">
+          <div class="container">
+            <div class="pro_nav_title">
+     
+              <p class="name" style="margin-top: 40px;">企业新闻</p>
+            </div>
+            <div class="pro_nav_tab">
+              <a href="/cnews" class="">企业新闻</a>
+              <a href="/hnews" class="">行业资讯</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="tab_container">
+            <div class="news_detail">
+                <div class="news_detail_title">
+                    <h2> {{mes.title}}</h2>
+                    <div class="news_detail_data">
+                        <span class="data_item">发布时间：<span> {{mes.time}}</span></span>&nbsp;&nbsp;
+                        <span class="data_item">浏览人次：<span> {{mes.frequency}}</span></span>
+                    </div>
+                </div>
+                <div class="new_detail_con">
+                    <p><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 14px;">
+                        &nbsp; &nbsp; &nbsp; &nbsp; {{mes.content}}
+                    </span></p>                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="news_detail_bot">
+        <div class="container clearfix">
+            <div class="news_detail_fy">
+              {{if mesa[id-2]}}<a class="page-link text-truncate" href="/snews?id={{id-1}}">上一篇： {{mesa[id-2].title}} {{else}}<span style="font-size: 14px;color: #666;">上一篇： 暂无 </span>{{/if}} </a> 
+               {{if mesa[id]}} <a class="page-link pull-xs-right text-truncate"  href="/snews?id={{id-(-1)}}">下一篇：  {{mesa[id].title}}{{else}}<span style="font-size: 14px;color: #666;">下一篇： 暂无</span>{{/if}}</a>           </div>
+            <div class="news_detail_share">
+                           <a href="/news" class="back_list"><i class="back_icon"></i>返回列表</a>
+                               <div class="share_box">
+                    <!-- JiaThis Button BEGIN -->
+                    <div class="jiathis_style clearfix">
+ 
+                        <a class="jiathis_button_qzone"></a>
+                        <a class="jiathis_button_tsina"></a>
+                        <a class="jiathis_button_tqq"></a>
+                        <a class="jiathis_button_weixin"></a>
+                        <a class="jiathis_button_renren"></a>
+                        <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+ 
+                    </div>
+                    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+                    <!-- JiaThis Button END -->
+                </div>
+            </div>
+        </div>
+     </div>
+    </div>
+    {{/block}}

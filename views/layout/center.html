@@ -14,8 +14,23 @@
       <script src="https://fastly.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
       <script src="https://fastly.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
+    <style>
+                 @media (min-width: 480px) and (max-width: 767px){
+           body {
+                 font-size: 13px;
+                  }}
+        @media (min-width: 768px) and (max-width: 991px){
+           body {
+                 font-size: 14px;
+                  }}
+        @media screen and (min-width:991px) {
+            body{
+                font-size: 16px;
+            }
+        } 
+    </style>
 </head>
-<body>
+<body >
     {{include "./head.html"}}
     
     {{block "content"}} {{/block}}
