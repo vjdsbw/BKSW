@@ -150,18 +150,65 @@ a, a:link, a:hover, a:visited, a:active {
     }
 }
 
+.header_small {
+  display: none;
+  background: rgba(255,255,255,.8);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1010;
+  animation: translateSmall 0.5s linear 0s ;
+}
+
+@media (max-width: 767px){
+  .logo{
+  display: none;
+       }
+   .header_small {
+     display: block;
+        background: rgba(255,255,255,.8);
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 1010;
+        animation: translateSmall 0.5s linear 0s ;
+    }
+    .header_small ul {
+      margin-top: 20px;
+    }
+    .header_small_nav li a {
+      display: block;
+      color: #333;
+      font-size: 16px;
+       text-align: center;
+       padding-top: 20px;
+  }
+
+
+  @keyframes translateSmall {
+    from {
+      transform: translateY(-340px);
+  }
+/* 这里将位置从0跳到-882，即一个div的宽度，但需要一直要在div内显示图片，所以将ul的宽度设为两倍div，并且再添加一组图片进去 */
+  to {
+      transform: translateY(0px);
+  }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+
+  }
 @media screen and(min-width: 992px) and (max-width: 1199px){
   .header_nav ul li a {
     padding: 0.35rem 0.01rem 0.2rem 0.01rem;
   }
+
 }
 
-@media screen and(min-width: 768px) and (max-width: 991px){
-.logo{
-  position: absolute;
-  left: 30%;
-}
-}
+
 
 @media screen and (min-width: 1200px){
   .right{
