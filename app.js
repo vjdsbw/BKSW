@@ -24,7 +24,7 @@ app.use(expressSession({
 }));
 
 //使用mongoose.connect()方法连接数据库
-mongoose.connect('mongodb://localhost/422');
+mongoose.connect('mongodb://localhost/beck');
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
@@ -37,12 +37,14 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.engine('html', require('express-art-template'));
 
+
 app.use("/",index)
 app.use("/about",about)
 app.use("/product",product)
 app.use("/base",base)
 app.use("/news",news)
 app.use("/contact",contact)
+
 
 
 

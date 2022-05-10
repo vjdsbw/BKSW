@@ -1,0 +1,63 @@
+{{extend './layout/center.html'}} 
+
+{{ block "style"}} 
+<link rel="stylesheet" href="/public/css/news.css">
+{{/block}}
+
+
+{{block  "content"}}
+    <div class="products_content">
+      <!--banner-->
+      <div class="pro_content_banner">
+        <div class="pro_banner">
+          <img src="../public/img/banner.png" alt="" />
+        </div>
+        <div class="pro_nav">
+          <div class="container">
+            <div class="pro_nav_title">
+              <p class="name" style="margin-top: 40px;">行业资讯</p>
+            </div>
+            <div class="pro_nav_tab">
+                <a href="/news/cnews" class="">企业新闻</a>
+                <a href="/news/hnews" class="">行业资讯</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="tab_container">
+          <div class="news_content">
+            <ul class="news_con_list" id="page_container">
+              <li class="news_con_item" style="visibility: visible">
+                <a href="/news/snews?id=1" class="clearfix">
+                  <div class="news_pic">
+                    <img
+                      src="http://bek.com.cn/public/upload/article/2019/10/25/af370a5796f94b085ebc85c126629872.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="news_info">
+                    <div class="news_time">
+                      <span class="day">25</span>
+                      <p class="year">2019-10</p>
+                    </div>
+                    <div class="news_text">
+                      <h2 class="news_text_tit">什么是医药中间体？</h2>
+                      <p class="news_text_dec">
+                        &nbsp;&nbsp;&nbsp;&nbsp;医药中间体，实际上是一些用于药品合成工艺过程中的一些化工原料或化工产品。这种化工产品，不需要药品的生产许可证，在普通的化工厂即可生产，只要达到一些的级别，即可用于药品的合成。我国每年约需与化工配套的原料和中间体2000多种，需求量达250万吨以上。经过多年的发展，我国医药生产所需的化工原料和中间体基本能够配套，...
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+          <div class="holder pages">
+            共<strong>1</strong>页&nbsp;<strong>1</strong>条
+          </div>
+        </div>
+      </div>
+    </div>
+    
+{{/block}}
