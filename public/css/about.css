@@ -84,8 +84,9 @@ img {
 @media (max-width: 767px){
     .pro_nav {
         background: #19b95f;
-        height:8rem;
+        height:6rem;
         padding-top: 0;
+        bottom: -6rem;
     }
 }
 
@@ -95,7 +96,6 @@ img {
     width: 26.25rem;
     color: #fff;
     font-size: 30px;
-    /* border: 1px solid black; */
     margin-left: 14rem;
 }
 @media (min-width:992px) and (max-width:1199px) {
@@ -149,7 +149,9 @@ img {
         text-align: center;
         width: 100%;
         position: relative;
-        top: -0.2rem;
+        bottom: 8rem;
+        left: -10rem;
+        z-index: 20000;
     }
 }
 @media (max-width:767px) {
@@ -159,6 +161,9 @@ img {
         height: 0.8rem;
         line-height: 1rem;
     }
+}
+.pro_nav .pro_nav_tab a:hover{
+   text-decoration: underline;
 }
 .pro_nav .pro_nav_tab {
     float: left;
