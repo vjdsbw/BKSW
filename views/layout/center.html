@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="/public/css/head.css">
+
     {{block "style"}} 
     {{/block}}
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
@@ -14,8 +15,23 @@
       <script src="https://fastly.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
       <script src="https://fastly.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
+    <style>
+                 @media (min-width: 480px) and (max-width: 767px){
+           body {
+                 font-size: 13px;
+                  }}
+        @media (min-width: 768px) and (max-width: 991px){
+           body {
+                 font-size: 14px;
+                  }}
+        @media screen and (min-width:991px) {
+            body{
+                font-size: 16px;
+            }
+        } 
+    </style>
 </head>
-<body>
+<body >
     {{include "./head.html"}}
     
     {{block "content"}} {{/block}}
@@ -25,6 +41,7 @@
     <script src="/node_modules/jquery/dist/jquery.js"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="/public/js/head.js"></script>
+    <script src="/public/js/flexible.js"></script>
     {{block "script"}} {{/block}}
 </body>
 </html>
