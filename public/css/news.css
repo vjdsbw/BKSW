@@ -464,5 +464,5 @@ div {
     }
 }
 .news_content ul li{
-  animation: translateUl 0.8s linear 0s ;
+  animation: translateUl 0.8s linear ;
 }

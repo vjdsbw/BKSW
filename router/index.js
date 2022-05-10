@@ -14,18 +14,6 @@ router.get("/contact",(req,res)=>{
 })
 
 
-// 以下为news的接口
-// router.get("/snews",async(req,res)=>{    
-//     var id =req.query.id;
-//     console.log(id);
-//     var mesa =await News.find();
-//     var mes=mesa[id-1];
-//     res.render("snews.html",{mes,mesa,id})
-// })
-// 以上为news的接口
-
-
-
 router.get("/about",(req,res)=>{
     res.render("about.html")
 })
