@@ -37,4 +37,8 @@ router.get("/snews",async(req,res)=>{
 
 
 
+router.get("/about",(req,res)=>{
+    res.render("about.html")
+})
+
 module.exports = router;
