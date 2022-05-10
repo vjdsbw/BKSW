@@ -9,6 +9,10 @@ router.get("/index", (req, res) => {
     res.render("index.html");
 })
 
+router.get("/contact",(req,res)=>{
+    res.render("contact.html");
+})
+
 
 // 以下为news的接口
 router.get("/news",(req,res)=>{
