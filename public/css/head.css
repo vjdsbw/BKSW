@@ -19,9 +19,9 @@ overflow-x: hidden;
   width: 100%;
   height: 110px;
   background-color:rgba(255, 255, 255, 0.9);
- position: absolute;
- z-index: 2;
- animation: translateUL 0.5s linear 0s ;
+  position: absolute;
+  z-index: 900;
+  animation: translateUL 0.5s linear 0s ;
 }
 .navbar.affix {
     position: fixed;
@@ -208,15 +208,17 @@ a, a:link, a:hover, a:visited, a:active {
 
 }
 
-
-
 @media screen and (min-width: 1200px){
-  .right{
+  .navbar .right{
     position: absolute;
-    left: 65%;
+    left: 74%;
   }
-  .left{
+  .navbar .left{
     position: absolute;
-    left: 10%;
+    left: 8%;
+  }
+  .navbar .logo{
+    position: absolute;
+    left: 42.5%;
   }
 }

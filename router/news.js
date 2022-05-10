@@ -4,8 +4,6 @@ const path = require("path")
 const mongoose = require("mongoose")
 const router = express.Router();
 
-
-
 router.get("/news",(req,res)=>{
     res.render("news.html")
 })

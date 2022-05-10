@@ -1,9 +1,10 @@
-{{extend './layout/center.html'}} 
+{{extend './layout/center.html'}}
 
-{{block "style"}}
+ {{block "style"}}
 <link rel="stylesheet" href="/public/css/swiper.css" />
+<link rel="stylesheet" href="/public/css/index.css" />
 <style>
-  *{
+  * {
     margin: 0;
     padding: 0;
   }
@@ -21,9 +22,8 @@
     height: 100%;
   }
 </style>
-{{/block}} 
+{{/block}} {{block "content"}}
 
-{{block "content"}}
 <!-- 轮播图 -->
 <div class="swiper-container">
   <ul class="swiper-wrapper">
@@ -45,6 +45,58 @@
 </div>
 <!-- 关于我们 -->
 <div class="about_wrap"></div>
+<!-- 联系 -->
+<div class="contact_box">
+  <div class="container">
+    <div class="contact_box_in">
+      <div class="contact_in">
+        <div class="contact_tit">CONTACT</div>
+        <div class="contact_type">
+          <div
+            class="contact_type_item wow fadeInUp animated"
+            style="visibility: visible; animation-name: fadeInUp"
+          >
+            <span class="contact_icon"></span>
+            <div>
+              <p>咨询热线</p>
+              <p>0512-68095917</p>
+            </div>
+          </div>
+          <div
+            class="contact_type_item wow fadeInUp animated"
+            data-wow-delay="0.3s"
+            style="
+              visibility: visible;
+              animation-delay: 0.3s;
+              animation-name: fadeInUp;
+            "
+          >
+            <span class="contact_icon-qq contact_icon_qq"></span>
+            <div>
+              <p>官方QQ</p>
+            </div>
+          </div>
+          <div
+            class="contact_type_item wow fadeInUp animated"
+            data-wow-delay="0.5s"
+            style="
+              visibility: visible;
+              animation-delay: 0.5s;
+              animation-name: fadeInUp;
+            "
+          >
+            <span class="contact_icon contact_icon_phone"></span>
+            <div>
+              <p>服务手机</p>
+              <p>13862064516</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 {{/block}} 
 
 {{block "script"}}
