@@ -12,5 +12,8 @@ router.get("/index", (req, res) => {
 router.get("/index.php/images/Corporatestyle", (req, res) => {
     res.render("base.html");
 })
+router.get("/about",(req,res)=>{
+    res.render("about.html")
+})
 
 module.exports = router;
