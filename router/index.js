@@ -9,6 +9,10 @@ router.get("/index", (req, res) => {
     res.render("index.html");
 })
 
+router.get("/contact",(req,res)=>{
+    res.render("contact.html");
+})
+
 
 // 以下为news的接口
 // router.get("/snews",async(req,res)=>{    
@@ -21,5 +25,21 @@ router.get("/index", (req, res) => {
 // 以上为news的接口
 
 
+
+router.get("/about",(req,res)=>{
+    res.render("about.html")
+})
+
+router.get("/index.php/single/company", (req, res) => {
+    res.render("company.html");
+})
+
+router.get("/index.php/product/product", (req, res) => {
+    res.render("product.html");
+})
+
+router.get("/index.php/images/contact", (req, res) => {
+    res.render("contact.html");
+})
 
 module.exports = router;

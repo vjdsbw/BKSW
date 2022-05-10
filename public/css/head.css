@@ -28,17 +28,17 @@ overflow-x: hidden;
     top: 0;
 
 }
-.left{
+.navbar .left{
   position: absolute;
   left: 5%;
   margin-top: 20px;
 
 }
-.left ul li{
+.navbar .left ul li{
   margin-left: 10px;
   position: relative;
 }
-.logo{
+.navbar .logo{
   width: 180px;
   height: 110px;
   border-radius: 50%/50%;
@@ -47,15 +47,15 @@ overflow-x: hidden;
   left: 41%;
   margin-top: 30px;  
 }
-.logo img{
+.navbar .logo img{
   padding-left: 10px;
 }
-.right{
+.navbar .right{
   position: absolute;
   left: 62%;
   margin-top: 20px;
 }
-.right ul li{
+.navbar .right ul li{
   position: relative;
 }
 .nav_en {
