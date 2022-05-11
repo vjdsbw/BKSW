@@ -5,7 +5,6 @@ const mongoose = require("mongoose")
 const router = express.Router();
 
 router.get("/contact",(req,res)=>{
-
     res.render("contact.html")
 })
 

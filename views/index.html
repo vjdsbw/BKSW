@@ -1,18 +1,14 @@
+{{extend './layout/center.html'}} 
 
-{{extend './layout/center.html'}} {{block "style"}}
+{{block "style"}}
 <link rel="stylesheet" href="/public/css/index.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 <link rel="stylesheet" href="http://bek.com.cn/template/pc/style/css/swiper.min.css" />
 <link rel="stylesheet" href="http://bek.com.cn/template/pc/style/css/animate.min.css" />
 <!-- <link rel="stylesheet" href="http://bek.com.cn/template/pc/skin/css/common.css"> -->
-{{/block}}
-{{block "content"}}
-
-
-{{block "style"}}
 <link rel="stylesheet" href="/public/css/swiper.css" />
 <style>
-  *{
+  * {
     margin: 0;
     padding: 0;
   }
@@ -25,48 +21,34 @@
     font-size: 18px;
   }
   .swiper-slide img {
-    width: 100%;
+    /* width: 100%; */
     display: block;
     height: 100%;
   }
 </style>
-{{/block}} 
-
+{{/block}}
 
 {{block "content"}}
-
-<div class="swiper-container">
-  <ul class="swiper-wrapper">
-    <li class="swiper-slide">
-      <a href="javascript:;">
-        <img src="/public/img/index-lunbotu1.jpg" alt="" />
-      </a>
-    </li>
-    <li class="swiper-slide">
-      <a href="javascript:;">
-        <img src="/public/img/index-lunbotu2.jpg" alt="" />
-      </a>
-    </li>
-  </ul>
-  <ul class="swiper-pagination">
-    <li></li>
-    <li></li>
-  </ul>
-</div>
-
+<!-- 轮播图 -->
 <div id="banner">
-
-  <div class="swiper-container" id="banner_in">
-    <div class="swiper-wrapper">
-      <div class="swiper-silde">
-        <a href="#"><img src="http://bek.com.cn/public/upload/other/2019/10/31/15d7a429831c7819cf1ee4693386e41b.jpg" alt="" /></a>
-      </div>
-      <div class="swiper-silde">
-        <a href="#"><img src="http://bek.com.cn/public/upload/other/2019/10/31/4f1cc96ad9212127c792950353f14e83.jpg" alt="" /></a>
-      </div>
-    </div>
-    <div class="swiper-pagination"></div>
-   </div>
+  <div class="swiper-container">
+    <ul class="swiper-wrapper">
+      <li class="swiper-slide">
+        <a href="javascript:;">
+          <img src="/public/img/index-lunbotu1.jpg" alt="" />
+        </a>
+      </li>
+      <li class="swiper-slide">
+        <a href="javascript:;">
+          <img src="/public/img/index-lunbotu2.jpg" alt="" />
+        </a>
+      </li>
+    </ul>
+    <ul class="swiper-pagination">
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
 </div>
 
 <!-- 关于我们 -->
@@ -74,6 +56,15 @@
   <div class="container">
     <div class="about">
       <div class="about_top">
+
+        <h2
+          class="about_title wow fadeInUp animate__animated"
+          data-wow-delay="0.3s"
+        ></h2>
+        <p
+          class="about_dec wow fadeInUp animate__animated"
+          data-wow-delay="0.5s"
+        >
         <h2 class="about_title wow fadeInUp animate__animated" data-wow-delay="0.3s"></h2>
         <p class="about_dec wow fadeInUp animate__animated" data-wow-delay="0.5s">
           苏州市贝克生物科技有限公司是一家入驻苏州新区高新技术创业中心的高科技企业。本公司有一批训练有素、经验丰富、实力雄厚的研制人员，从事以生物化学、医药化学和材料化学为主体的高新技术化学品的研究、开发、制造。积累了一批技术含量高、市场前景好的高科技产品和技术。
@@ -87,6 +78,11 @@
             <a href="#">
               <div class="about_list_pic">
                 <div class="about_list_pic_in">
+                  <img
+                    src="http://bek.com.cn/public/upload/images/2019/10/29/f35eacff35170a841b14a7784e0ea02e.jpg"
+                    alt=""
+                  />
+
                   <img src="http://bek.com.cn/public/upload/images/2019/10/29/f35eacff35170a841b14a7784e0ea02e.jpg"
                     alt="">
                 </div>
@@ -98,6 +94,11 @@
             <a href="#">
               <div class="about_list_pic">
                 <div class="about_list_pic_in">
+                  <img
+                    src="http://bek.com.cn/public/upload/images/2019/10/29/35a24e64d2d94a3982e5888e3d5fee10.jpg"
+                    alt=""
+                  />
+
                   <img src="http://bek.com.cn/public/upload/images/2019/10/29/35a24e64d2d94a3982e5888e3d5fee10.jpg"
                     alt="">
                 </div>
@@ -109,6 +110,10 @@
             <a href="#">
               <div class="about_list_pic">
                 <div class="about_list_pic_in">
+                  <img
+                    src="http://bek.com.cn/public/upload/images/2019/10/29/d40a1a804dbebc38376b5db2c5781d11.jpg"
+                    alt=""
+                  />
                   <img src="http://bek.com.cn/public/upload/images/2019/10/29/d40a1a804dbebc38376b5db2c5781d11.jpg"
                     alt="">
                 </div>
@@ -120,6 +125,11 @@
             <a href="#">
               <div class="about_list_pic">
                 <div class="about_list_pic_in">
+                  <img
+                    src="http://bek.com.cn/public/upload/images/2019/11/06/4d8beee36e213a4b73c79a5d7f8319a0.png"
+                    alt=""
+                  />
+
                   <img src="http://bek.com.cn/public/upload/images/2019/11/06/4d8beee36e213a4b73c79a5d7f8319a0.png"
                     alt="">
                 </div>
@@ -127,7 +137,6 @@
               <p class="about_list_name">环境展示</p>
             </a>
           </li>
-
         </ul>
       </div>
     </div>
@@ -233,7 +242,6 @@
                   </div>
                 </div>
               </a>
-
             </div>
           </div>
           <div class="tab_item">
@@ -254,6 +262,7 @@
               <a href="#">
                 <div class="pro_item">
                   <div class="pro_item_pic">
+
                     <img src="http://bek.com.cn/public/upload/product/2019/10/28/2cbcb1b026764041db9b152d5b5a969d.png"
                       alt="">
                   </div>
@@ -293,6 +302,7 @@
               <a href="#">
                 <div class="pro_item">
                   <div class="pro_item_pic">
+
                     <img src="http://bek.com.cn/public/upload/product/2019/10/28/7d1ca7aba1317cc4554c2f8b96947b9c.png"
                       alt="">
                   </div>
@@ -316,7 +326,6 @@
                   </div>
                 </div>
               </a>
-
             </div>
           </div>
           <div class="tab_item">
@@ -368,6 +377,7 @@
                   </div>
                   <div class="pro_item_dec">
                     <p class="pro_dec_text"> 2-氯-5-硝基-3-吡啶羧酰胺</p>
+
                     <p class="pro_dec_num">13 <span class="line"></span></p>
                     <span class="go_icon"></span>
                   </div>
@@ -376,6 +386,7 @@
               <a href="#">
                 <div class="pro_item">
                   <div class="pro_item_pic">
+
                     <img src="http://bek.com.cn/public/upload/product/2019/10/28/6580615531606fe299aac15e717f1581.png"
                       alt="">
                   </div>
@@ -412,6 +423,7 @@
     <div class="base_in clearfix">
       <div class="base_left right wow fadeInUp" data-wow-delay="0.5s">
         <div class="base_in_pic">
+
           <img src="http://bek.com.cn/public/upload/images/2019/10/29/f35eacff35170a841b14a7784e0ea02e.jpg" alt="">
         </div>
         <div class="base_in_dec">
@@ -499,8 +511,10 @@
               <span class="time right">10-25</span>
             </div>
             <div class="news_item_bot">
+
               <p class="dec"> 医药中间体，实际上是一些用于药品合成工...</p>
               <span class="arrow"><span class="glyphicon glyphicon-arrow-right"></span></span>
+
             </div>
           </a>
         </li>
@@ -545,9 +559,56 @@
   </div>
 </div>
 <!-- 联系 -->
-<div class="contact_box"></div>
-
-
+<div class="contact_box">
+  <div class="container">
+    <div class="contact_box_in">
+      <div class="contact_in">
+        <div class="contact_tit">CONTACT</div>
+        <div class="contact_type">
+          <div
+            class="contact_type_item wow fadeInUp animated"
+            style="visibility: visible; animation-name: fadeInUp"
+          >
+            <span class="contact_icon"></span>
+            <div>
+              <p>咨询热线</p>
+              <p>0512-68095917</p>
+            </div>
+          </div>
+          <div
+            class="contact_type_item wow fadeInUp animated"
+            data-wow-delay="0.3s"
+            style="
+              visibility: visible;
+              animation-delay: 0.3s;
+              animation-name: fadeInUp;
+            "
+          >
+            <span class="contact_icon-qq contact_icon_qq"></span>
+            <div>
+              <p>官方QQ</p>
+            </div>
+          </div>
+          <div
+            class="contact_type_item wow fadeInUp animated"
+            data-wow-delay="0.5s"
+            style="
+              visibility: visible;
+              animation-delay: 0.5s;
+              animation-name: fadeInUp;
+            "
+          >
+            <span class="contact_icon contact_icon_phone"></span>
+            <div>
+              <p>服务手机</p>
+              <p>13862064516</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {{/block}} 
 
 
@@ -559,6 +620,7 @@
 <!-- <script src="/public/js/swiper.min.js"></script> -->
 <script src="http://bek.com.cn/template/pc/style/js/swiper.jquery.min.js"></script>
 <script src="http://bek.com.cn/template/pc/style/js/wow.min.js"></script>
+<script src="/public/js/swiper.js"></script>
 <!-- <script src="http://bek.com.cn/template/pc/style/js/common.js"></script> -->
 <script>
   var swiper = new Swiper("#banner_in", {
@@ -576,105 +638,99 @@
   $(function () {
     $(".about_list_item").mouseout(function () {
       $(".about_list_item").removeClass("active");
-    })
+    });
     $(".about_list_item").mouseover(function () {
       $(this).addClass("active").siblings().removeClass("active");
-    })
-  })
+    });
+  });
 </script>
-
 <!-- 产品展示 -->
 <script>
   // go_icon
   $(".pro_item").mouseout(function () {
-      $(".pro_item").removeClass("active");
-    })
-    $(".pro_item").mouseover(function () {
-      $(this).addClass("active").siblings().removeClass("active");
-    })
+    $(".pro_item").removeClass("active");
+  });
+  $(".pro_item").mouseover(function () {
+    $(this).addClass("active").siblings().removeClass("active");
+  });
 
-  $(".tab_show a").on('touchstart mousedown', function (e) {
-    e.preventDefault()
-    $(".tab_show .active").removeClass('active')
-    $(this).addClass('active')
-    $('#tabs_container .tab_item').eq($(this).index()).addClass('active').siblings().removeClass('active');
+  $(".tab_show a").on("touchstart mousedown", function (e) {
+    e.preventDefault();
+    $(".tab_show .active").removeClass("active");
+    $(this).addClass("active");
+    $("#tabs_container .tab_item")
+      .eq($(this).index())
+      .addClass("active")
+      .siblings()
+      .removeClass("active");
   });
   $(".tab_show a").click(function (e) {
-    e.preventDefault()
-  })
+    e.preventDefault();
+  });
 </script>
-
 <!-- 环境展示 -->
 <script>
   $(function () {
-    this.prevBtn = $('.prev_btn');
-    this.nextBtn = $('.next_btn');
-    var list = $('.base_list_in li');
+    this.prevBtn = $(".prev_btn");
+    this.nextBtn = $(".next_btn");
+    var list = $(".base_list_in li");
     var _this = this;
-    var showImg = $('.base_in_pic img');
-    var showText = $('.base_in_text');
+    var showImg = $(".base_in_pic img");
+    var showText = $(".base_in_text");
 
     list.mouseout(function () {
       list.removeClass("active");
-    })
+    });
     list.mouseover(function () {
       $(this).addClass("active").siblings().removeClass("active");
-    })
+    });
 
     // 鼠标移入图片改变
     this.num = 0;
     list.hover(function () {
       var index = $(this).index();
       _this.num = index;
-      var curImgSrc = $(this).find('img').attr('src');
-      var curText = $(this).find('.base_name').text();
+      var curImgSrc = $(this).find("img").attr("src");
+      var curText = $(this).find(".base_name").text();
 
-      showImg.attr('src', curImgSrc);
+      showImg.attr("src", curImgSrc);
       showText.text(curText);
-
     });
     // 右移
-    this.nextBtn.on('click', function () {
+    this.nextBtn.on("click", function () {
       _this.num++;
       // 比较li的长度，右移是--
       if (_this.num >= list.length) {
         _this.num--;
         return;
       }
-      list.eq(_this.num).addClass('active').siblings().removeClass('active');
+      list.eq(_this.num).addClass("active").siblings().removeClass("active");
       // 通过改变图片的src
-      var curImgSrc = list.eq(_this.num).find('img').attr('src');
-      var curText = list.eq(_this.num).find('.base_name').text();
+      var curImgSrc = list.eq(_this.num).find("img").attr("src");
+      var curText = list.eq(_this.num).find(".base_name").text();
       //把改变图片的src放到显示的大图上
-      showImg.attr('src', curImgSrc);
+      showImg.attr("src", curImgSrc);
       showText.text(curText);
     });
     // 左移
-    this.prevBtn.on('click', function () {
+    this.prevBtn.on("click", function () {
       _this.num--;
       if (_this.num < 0) {
         _this.num = 0;
         return;
       }
-      list.eq(_this.num).addClass('active').siblings().removeClass('active');
-      var curImgSrc = list.eq(_this.num).find('img').attr('src');
-      var curText = list.eq(_this.num).find('.base_name').text();
+      list.eq(_this.num).addClass("active").siblings().removeClass("active");
+      var curImgSrc = list.eq(_this.num).find("img").attr("src");
+      var curText = list.eq(_this.num).find(".base_name").text();
 
-      showImg.attr('src', curImgSrc);
+      showImg.attr("src", curImgSrc);
       showText.text(curText);
     });
-  })
+  });
 </script>
 <script>
   new WOW().init();
 </script>
-
-
-
-
-
-
-<script src="/public/js/swiper.js"></script>
 <script>
   var swiper = new Swiper(".swiper-container", {
     loop: "true",

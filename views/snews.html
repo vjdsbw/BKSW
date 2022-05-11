@@ -46,7 +46,7 @@
         <div class="container clearfix">
             <div class="news_detail_fy">
               {{if mesa[id-2]}}<a class="page-link text-truncate" href="/news/snews?id={{id-1}}">上一篇： {{mesa[id-2].title}} {{else}}<span style="font-size: 14px;color: #666;">上一篇： 暂无 </span>{{/if}} </a> 
-               {{if mesa[id]}} <a class="page-link pull-xs-right text-truncate"  href="/news/snews?id={{id-(-1)}}">下一篇：  {{mesa[id].title}}{{else}}<span style="font-size: 14px;color: #666;">下一篇： 暂无</span>{{/if}}</a>           </div>
+               {{if mesa[id]}} <a class="page-link pull-xs-right text-truncate"  href="/news/snews?id={{id-(-1)}}">下一篇：{{mesa[id].title}}{{else}}<span style="font-size: 14px;color: #666;">下一篇： 暂无</span>{{/if}}</a>           </div>
             <div class="news_detail_share">
                            <a href="/news/news" class="back_list"><i class="back_icon"></i>返回列表</a>
                                <div class="share_box">
