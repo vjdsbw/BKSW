@@ -1,16 +1,157 @@
-{{extend './layout/center.html'}}
+{{extend './layout/center.html'}} 
+
 
 {{block "style"}}
+<link rel="stylesheet" href="/public/css/product.css">
+{{/block}} 
 
 
-{{/block}}
-
-{{block "content"}}
+{{block  "content"}}
 <img src="/public/img/banner.png">
+<div class="container" id="total">
+  <div class="row">
+    <div>
+        <a href="/product/product2">
+          <img src="/public/img/pro-img/1-1-1.png" alt="" class="aa"/>
+        </a>
+        <a href="" class="wenzi"> 3',5,5'-四甲基联苯胺</a>
 
-{{/block}}
+      <p class="shuzi">
+        14
+        <span class="line"></span>
+      </p>
+      <span class="tubiao"
+        ><a href="/product/product2"
+          ><img src="/public/img/pro-img/tubiao.png" alt="" class="bb"
+        /></a>
+      </span>
+    </div>
+
+    <div>
+      <a href="/product/product2"><img src="/public/img/pro-img/1-1-2.png" alt="" class="aa" /></a>
+      <a href="#" class="wenzi">3,3',5,5'-四甲基联苯胺盐酸盐</a>
+      <p class="shuzi">
+        14
+        <span class="line"></span>
+      </p>
+      <span class="tubiao"
+        ><a href="/product/product2"
+          ><img src="/public/img/pro-img/tubiao.png" alt="" class="bb"
+        /></a>
+      </span>
+    </div>
+
+    <div>
+      <a href="/product/product2"><img src="/public/img/pro-img/1-1-3.png" alt="" class="aa" /></a>
+      <a href="/product/product2" class="wenzi"> 3,3'5,5'-四甲基联苯胺丙磺酸钠</a>
+      <p class="shuzi">
+        14
+        <span class="line"></span>
+      </p>
+      <span class="tubiao"
+        ><a href="/product/product2"
+          ><img src="/public/img/pro-img/tubiao.png" alt="" class="bb"
+        /></a>
+      </span>
+    </div>
+    <div>
+      <a href="/product/product2"><img src="/public/img/pro-img/1-2-1.png" alt="" class="aa" /></a>
+      <a href="/product/product2" class="wenzi">3,3'5,5'-四甲基联苯胺硫酸盐</a>
+      <p class="shuzi">
+        14
+        <span class="line"></span>
+      </p>
+      <span class="tubiao"
+        ><a href="/product/product2"
+          ><img src="/public/img/pro-img/tubiao.png" alt="" class="bb"
+        /></a>
+      </span>
+    </div>
+    <div>
+      <a href="/product/product2"><img src="/public/img/pro-img/1-2-2.png" alt="" class="aa" /></a>
+      <a href="/product/product2" class="wenzi"> 5-溴-6-氯-3-吲哚磷酸对甲苯胺盐</a>
+      <p class="shuzi">
+        14
+        <span class="line"></span>
+      </p>
+      <span class="tubiao"
+        ><a href="/product/product2"
+          ><img src="/public/img/pro-img/tubiao.png" alt="" class="bb"
+        /></a>
+      </span>
+    </div>
+    <div>
+      <a href="/product/product2"><img src="/public/img/pro-img/1-2-3.png" alt="" class="aa" /></a>
+      <a href="/product/product2" class="wenzi"> 氯化四唑蓝</a>
+      <p class="shuzi">
+        14
+        <span class="line"></span>
+      </p>
+      <span class="tubiao"
+        ><a href="/product/product2"
+          ><img src="/public/img/pro-img/tubiao.png" alt="" class="bb"
+        /></a>
+      </span>
+    </div>
+    <div>
+      <a href="/product/product2"><img src="/public/img/pro-img/1-3-1.png" alt="" class="aa" /></a>
+      <a href="/product/product2" class="wenzi"> 氯化三苯基四氮唑</a>
+      <p class="shuzi">
+        14
+        <span class="line"></span>
+      </p>
+      <span class="tubiao"
+        ><a href="/product/product2"
+          ><img src="/public/img/pro-img/tubiao.png" alt="" class="bb"
+        /></a>
+      </span>
+    </div>
+    <div>
+      <a href="/product/product2"><img src="/public/img/pro-img/1-3-2.png" alt="" class="aa" /></a>
+      <a href="/product/product2" class="wenzi"> 噻唑蓝</a>
+      <p class="shuzi">
+        14
+        <span class="line"></span>
+      </p>
+      <span class="tubiao"
+        ><a href="/product/product2"
+          ><img src="/public/img/pro-img/tubiao.png" alt="" class="bb"
+        /></a>
+      </span>
+    </div>
+    <div>
+      <a href="/product/product2"><img src="/public/img/pro-img/1-3-3.png" alt="" class="aa" /></a>
+      <a href="/product/product2" class="wenzi"> 5-溴-4-氯-3-羟基吲哚乙酸酯</a>
+      <p class="shuzi">
+        14
+        <span class="line"></span>
+      </p>
+      <span class="tubiao"
+        ><a href="/product/product2"
+          ><img src="/public/img/pro-img/tubiao.png" alt="" class="bb"
+        /></a>
+      </span>
+    </div>
+  </div>
+</div>
+<div id="page"></div>
+{{/block}} 
 
 {{block "script"}}
-
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="../src/jquery.min.js"></script>
+<script type="text/javascript" src="../src/jquery.page.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("#page").Page({
+      totalPages: 15,//分页总数
+      liNums: 7,//分页的数字按钮数(建议取奇数)
+      activeClass: 'activP', //active 类样式定义
+      callBack : function(page){
+            //console.log(page)
+      }
+  });
+})
+</script>
 
 {{/block}}
