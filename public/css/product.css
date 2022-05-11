@@ -43,12 +43,16 @@ a:hover {
 }
 
 .tubiao {
-    width: 25px;
-    height: 25px;
+
     position: absolute;
     left: 320px;
+    bottom: 10px;
     color: #009140;
     display: none;
+}
+.thumbnail:hover .tubiao{
+
+  display: block ;
 }
 
 bb {
@@ -168,3 +172,6 @@ bb {
     }
 };
 
+.tubiaoail{
+    display: block;
+}

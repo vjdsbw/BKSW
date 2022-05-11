@@ -15,10 +15,8 @@ content: {
 },
 num:{
     type:Number
-
 }
 })
-
 
 const News = mongoose.model("news",newsSchema,"news");
 module.exports = News;
