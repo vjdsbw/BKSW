@@ -37,7 +37,6 @@ dd {
 }
 img {
     border: none;
-    vertical-align: middle;
 }
 .pro_banner img {
     width: 100%;
@@ -112,20 +111,30 @@ a, a:link, a:hover, a:visited, a:active {
 
 .main{
     margin: 0 auto;
-    margin-top: 3.125rem;
+    /* margin-top: 3.125rem; */
     height: 458.8px;
+    height: auto;
+    width: 1190px; 
+    background-position: center bottom;
+    margin-top: 150px;
+    
+}
+.main p {
+    font-size: 16px;
     width: 100%;
-    margin-top: 120px;
 }
 .main .main_img{
     margin: auto;
     border: none;
     margin-top: 20px;
+    margin-bottom: 30px;
+  
 }
 .main .main_img img{
     width: 100%;
-    height: 294px;
-    vertical-align: middle;
+    max-height: 294px;
+    height: auto;
+
 }
 
 
