@@ -6,6 +6,7 @@ const router = express.Router();
 
 router.get("/news",(req,res)=>{
     res.render("news.html")
+
 })
 
 router.get("/cnews",(req,res)=>{
@@ -20,7 +21,7 @@ router.get("/snews",async(req,res)=>{
     var mes=mesa[id-1];
     console.log(mes.frequency);
     var temp = mes.frequency+1;
-    News.update({num:id},{frequency:temp},(err)=>{
+    News.updateMany({num:id},{frequency:temp},(err)=>{
         if(err) {
         console.log(err);
     }})
