@@ -10,7 +10,7 @@ const base = require("./router/base")
 const news = require("./router/news")
 const contact = require("./router/contact")
 const app=express();
-const port=8080;
+const port=3000;
 
 //挂载express-session中间件
 app.use(expressSession({
