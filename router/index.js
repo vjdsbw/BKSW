@@ -13,6 +13,10 @@ router.get("/index", (req, res) => {
 router.get("/contact",(req,res)=>{
     res.render("contact.html");
 })
+router.get("/about",(req,res)=>{
+    res.render("about.html")
+})
+
 
 router.get("/Corporatestyle",(req,res)=>{
     res.render("base.html");
