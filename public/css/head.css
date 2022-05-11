@@ -19,9 +19,18 @@ overflow-x: hidden;
   width: 100%;
   height: 110px;
   background-color:rgba(255, 255, 255, 0.9);
+<<<<<<< HEAD
   position: absolute;
   z-index: 900;
   animation: translateUL 0.5s linear 0s ;
+=======
+ position: absolute;
+
+
+ z-index: 2;
+
+ animation: translateUL 0.5s linear 0s ;
+>>>>>>> fd1fac45dcd1a1e6d5a1929214b6e2947e47cf15
 }
 .navbar.affix {
     position: fixed;

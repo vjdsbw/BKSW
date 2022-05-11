@@ -16,6 +16,7 @@ router.get("/contact",(req,res)=>{
 
 router.get("/Corporatestyle",(req,res)=>{
     res.render("base.html");
+
 })
 
 
