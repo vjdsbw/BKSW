@@ -1,6 +1,18 @@
-{{extend './layout/center.html'}}
-
- {{block "style"}}
+{{extend './layout/center.html'}} {{block "style"}}
+<link rel="stylesheet" href="/public/css/index.css" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="http://bek.com.cn/template/pc/style/css/swiper.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="http://bek.com.cn/template/pc/style/css/animate.min.css"
+/>
+<!-- <link rel="stylesheet" href="http://bek.com.cn/template/pc/skin/css/common.css"> -->
 <link rel="stylesheet" href="/public/css/swiper.css" />
 <link rel="stylesheet" href="/public/css/index.css" />
 <style>
@@ -22,29 +34,586 @@
     height: 100%;
   }
 </style>
-{{/block}} {{block "content"}}
+
+{{/block}} 
+
+{{block "content"}}
 
 <!-- 轮播图 -->
-<div class="swiper-container">
-  <ul class="swiper-wrapper">
-    <li class="swiper-slide">
-      <a href="javascript:;">
-        <img src="/public/img/index-lunbotu1.jpg" alt="" />
-      </a>
-    </li>
-    <li class="swiper-slide">
-      <a href="javascript:;">
-        <img src="/public/img/index-lunbotu2.jpg" alt="" />
-      </a>
-    </li>
-  </ul>
-  <ul class="swiper-pagination">
-    <li></li>
-    <li></li>
-  </ul>
+<div id="banner">
+  <div class="swiper-container">
+    <ul class="swiper-wrapper">
+      <li class="swiper-slide">
+        <a href="javascript:;">
+          <img src="/public/img/index-lunbotu1.jpg" alt="" />
+        </a>
+      </li>
+      <li class="swiper-slide">
+        <a href="javascript:;">
+          <img src="/public/img/index-lunbotu2.jpg" alt="" />
+        </a>
+      </li>
+    </ul>
+    <ul class="swiper-pagination">
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
 </div>
 <!-- 关于我们 -->
-<div class="about_wrap"></div>
+<div class="about_wrap">
+  <div class="container">
+    <div class="about">
+      <div class="about_top">
+        <h2
+          class="about_title wow fadeInUp animate__animated"
+          data-wow-delay="0.3s"
+        ></h2>
+        <p
+          class="about_dec wow fadeInUp animate__animated"
+          data-wow-delay="0.5s"
+        >
+          苏州市贝克生物科技有限公司是一家入驻苏州新区高新技术创业中心的高科技企业。本公司有一批训练有素、经验丰富、实力雄厚的研制人员，从事以生物化学、医药化学和材料化学为主体的高新技术化学品的研究、开发、制造。积累了一批技术含量高、市场前景好的高科技产品和技术。
+          这些产品已在生化检验、刑事侦破、环境监测、医药合成，以及液晶显示、电子工业等领域中获得了应用。苏州市贝克生物科技有限公司坚守&quot;质量，用户至上，热忱服务&quot;的准则。公司将以优良的产品和先进的技术为客户服务。承接高技术精细化学品的研制开发业务及相关的技术咨询业务。
+        </p>
+      </div>
+      <!-- 列表 -->
+      <div class="about_list_box">
+        <ul class="about_list clearfix">
+          <li class="about_list_item wow zoomIn animate__animated">
+            <a href="#">
+              <div class="about_list_pic">
+                <div class="about_list_pic_in">
+                  <img
+                    src="http://bek.com.cn/public/upload/images/2019/10/29/f35eacff35170a841b14a7784e0ea02e.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <p class="about_list_name">环境展示</p>
+            </a>
+          </li>
+          <li class="about_list_item wow zoomIn animate__animated">
+            <a href="#">
+              <div class="about_list_pic">
+                <div class="about_list_pic_in">
+                  <img
+                    src="http://bek.com.cn/public/upload/images/2019/10/29/35a24e64d2d94a3982e5888e3d5fee10.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <p class="about_list_name">环境展示</p>
+            </a>
+          </li>
+          <li class="about_list_item wow zoomIn">
+            <a href="#">
+              <div class="about_list_pic">
+                <div class="about_list_pic_in">
+                  <img
+                    src="http://bek.com.cn/public/upload/images/2019/10/29/d40a1a804dbebc38376b5db2c5781d11.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <p class="about_list_name">环境展示</p>
+            </a>
+          </li>
+          <li class="about_list_item wow zoomIn animate__animated">
+            <a href="#">
+              <div class="about_list_pic">
+                <div class="about_list_pic_in">
+                  <img
+                    src="http://bek.com.cn/public/upload/images/2019/11/06/4d8beee36e213a4b73c79a5d7f8319a0.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <p class="about_list_name">环境展示</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 产品展示 -->
+<div class="products_show">
+  <div class="container">
+    <div class="products_show_top">
+      <div class="decorate_icon">
+        <span class="decorate_icon_arrow"></span>
+        <span class="decorate_icon_line1"></span>
+        <span class="decorate_icon_line2"></span>
+      </div>
+      <div class="products_title wow fadeInUp" data-wow-delay="0.5s">
+        <h2 class="products_title_en">PRODUCTS</h2>
+        <p class="products_title_name">产品展示</p>
+      </div>
+      <div class="tab_show clearfix">
+        <a href="javascript:;" class="wow fadeInUp active" data-wow-delay="0.6s"
+          >生化检验</a
+        >
+        <a href="javascript:;" class="wow fadeInUp" data-wow-delay="0.6s"
+          >医药中间体</a
+        >
+        <a href="javascript:;" class="wow fadeInUp" data-wow-delay="0.6s"
+          >材料化学</a
+        >
+      </div>
+      <div class="tab_container wow fadeInUp" data-wow-delay="1s">
+        <div class="tab_box clearfix" id="tabs_container">
+          <div class="tab_item active">
+            <div class="pro_item_box clearfix">
+              <a href="#" class="">
+                <div class="pro_item">
+                  <div class="pro_item_pic">
+                    <img
+                      src="http://bek.com.cn/public/upload/product/2019/11/06/8b51abeb032642c08952c59828c81c01.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="pro_item_dec">
+                    <p class="pro_dec_text">3,3',5,5'-四甲基联苯胺</p>
+                    <p class="pro_dec_num">14 <span class="line"></span></p>
+                    <span class="go_icon"></span>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="">
+                <div class="pro_item">
+                  <div class="pro_item_pic">
+                    <img
+                      src="http://bek.com.cn/public/upload/product/2019/10/21/6f855e3f3a0e8b40d806718f93338003.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="pro_item_dec">
+                    <p class="pro_dec_text">3,3',5,5'-四甲基联苯胺盐酸盐</p>
+                    <p class="pro_dec_num">14 <span class="line"></span></p>
+                    <span class="go_icon"></span>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="">
+                <div class="pro_item">
+                  <div class="pro_item_pic">
+                    <img
+                      src="http://bek.com.cn/public/upload/product/2019/10/25/518f5bf7be5fc098e0a26ea7d9e23214.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="pro_item_dec">
+                    <p class="pro_dec_text">3,3'5,5'-四甲基联苯胺丙磺酸钠</p>
+                    <p class="pro_dec_num">14 <span class="line"></span></p>
+                    <span class="go_icon"></span>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="">
+                <div class="pro_item">
+                  <div class="pro_item_pic">
+                    <img
+                      src="http://bek.com.cn/public/upload/product/2019/11/06/a5df0f715b7c09c3af938df9606eaad6.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="pro_item_dec">
+                    <p class="pro_dec_text">3,3'5,5'-四甲基联苯胺硫酸盐</p>
+                    <p class="pro_dec_num">14 <span class="line"></span></p>
+                    <span class="go_icon"></span>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="">
+                <div class="pro_item">
+                  <div class="pro_item_pic">
+                    <img
+                      src="http://bek.com.cn/public/upload/product/2019/10/25/dc9117f98d40abd1bf7c70c07cb9eef0.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="pro_item_dec">
+                    <p class="pro_dec_text">5-溴-6-氯-3-吲哚磷酸对甲苯胺盐</p>
+                    <p class="pro_dec_num">14 <span class="line"></span></p>
+                    <span class="go_icon"></span>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="">
+                <div class="pro_item">
+                  <div class="pro_item_pic">
+                    <img
+                      src="http://bek.com.cn/public/upload/product/2019/10/25/42b24db04b7e517852426a4bdaa01905.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="pro_item_dec">
+                    <p class="pro_dec_text">氯化四唑蓝</p>
+                    <p class="pro_dec_num">14 <span class="line"></span></p>
+                    <span class="go_icon"></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="tab_item">
+            <div class="pro_item_box clearfix">
+              <a href="#">
+                <div class="pro_item">
+                  <div class="pro_item_pic">
+                    <img
+                      src="http://bek.com.cn/public/upload/product/2019/10/28/00e9604426ea99a84d6e23c3e9faac49.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="pro_item_dec">
+                    <p class="pro_dec_text">偶氮二甲酸二异丙酯</p>
+                    <p class="pro_dec_num">20 <span class="line"></span></p>
+                    <span class="go_icon"></span>
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="pro_item">
+                  <div class="pro_item_pic">
+                    <img
+                      src="http://bek.com.cn/public/upload/product/2019/10/28/2cbcb1b026764041db9b152d5b5a969d.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="pro_item_dec">
+                    <p class="pro_dec_text">偶氮二甲酸二苄酯</p>
+                    <p class="pro_dec_num">20 <span class="line"></span></p>
+                    <span class="go_icon"></span>
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="pro_item">
+                  <div class="pro_item_pic">
+                    <img
+                      src="http://bek.com.cn/public/upload/product/2019/10/28/aa69e5a991511d268ed7f5a3a1284189.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="pro_item_dec">
+                    <p class="pro_dec_text">偶氮二甲酰二吗啉</p>
+                    <p class="pro_dec_num">20 <span class="line"></span></p>
+                    <span class="go_icon"></span>
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="pro_item">
+                  <div class="pro_item_pic">
+                    <img
+                      src="http://bek.com.cn/public/upload/product/2019/10/28/95a083956ae0e375618f661abd999982.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="pro_item_dec">
+                    <p class="pro_dec_text">偶氮二甲酰二哌啶</p>
+                    <p class="pro_dec_num">20 <span class="line"></span></p>
+                    <span class="go_icon"></span>
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="pro_item">
+                  <div class="pro_item_pic">
+                    <img
+                      src="http://bek.com.cn/public/upload/product/2019/10/28/7d1ca7aba1317cc4554c2f8b96947b9c.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="pro_item_dec">
+                    <p class="pro_dec_text">N,,N,N',N'-四甲基-偶氮二甲酰胺</p>
+                    <p class="pro_dec_num">20 <span class="line"></span></p>
+                    <span class="go_icon"></span>
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="pro_item">
+                  <div class="pro_item_pic">
+                    <img
+                      src="http://bek.com.cn/public/upload/product/2019/10/28/130ff7c00177c70ec11e67df84dab474.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="pro_item_dec">
+                    <p class="pro_dec_text">双(4-氯苄基)偶氮二甲酸酯</p>
+                    <p class="pro_dec_num">20 <span class="line"></span></p>
+                    <span class="go_icon"></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="tab_item">
+            <div class="pro_item_box clearfix">
+              <a href="#">
+                <div class="pro_item">
+                  <div class="pro_item_pic">
+                    <img
+                      src="http://bek.com.cn/public/upload/product/2019/10/28/9fc9863493b7d11bb1edb69b89f67809.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="pro_item_dec">
+                    <p class="pro_dec_text">4-甲基-1,2,3-噻二唑-5-</p>
+                    <p class="pro_dec_num">13 <span class="line"></span></p>
+                    <span class="go_icon"></span>
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="pro_item">
+                  <div class="pro_item_pic">
+                    <img
+                      src="http://bek.com.cn/public/upload/product/2019/10/28/818a94c23e5b4b263b706ff1dddf40d3.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="pro_item_dec">
+                    <p class="pro_dec_text">4-甲基-1,2,3-噻二唑-5-羧酸甲酯</p>
+                    <p class="pro_dec_num">13 <span class="line"></span></p>
+                    <span class="go_icon"></span>
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="pro_item">
+                  <div class="pro_item_pic">
+                    <img
+                      src="http://bek.com.cn/public/upload/product/2019/10/28/b9147ef1228835e5b8b8519829c09bef.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="pro_item_dec">
+                    <p class="pro_dec_text">5-己基-2,2'-双噻酚</p>
+                    <p class="pro_dec_num">13 <span class="line"></span></p>
+                    <span class="go_icon"></span>
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="pro_item">
+                  <div class="pro_item_pic">
+                    <img
+                      src="http://bek.com.cn/public/upload/product/2019/10/28/d1b302757ea64abef6a074349f22c0dd.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="pro_item_dec">
+                    <p class="pro_dec_text">2-氯-5-硝基-3-吡啶羧酰胺</p>
+                    <p class="pro_dec_num">13 <span class="line"></span></p>
+                    <span class="go_icon"></span>
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="pro_item">
+                  <div class="pro_item_pic">
+                    <img
+                      src="http://bek.com.cn/public/upload/product/2019/10/28/6580615531606fe299aac15e717f1581.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="pro_item_dec">
+                    <p class="pro_dec_text">4,7-二溴-吡啶并噻二唑</p>
+                    <p class="pro_dec_num">13 <span class="line"></span></p>
+                    <span class="go_icon"></span>
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="pro_item">
+                  <div class="pro_item_pic">
+                    <img
+                      src="http://bek.com.cn/public/upload/product/2019/10/28/91db16ea193098207565179decb59ba2.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="pro_item_dec">
+                    <p class="pro_dec_text">4,7-二溴-5-氟-苯并噻二唑</p>
+                    <p class="pro_dec_num">13 <span class="line"></span></p>
+                    <span class="go_icon"></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 环境展示 -->
+<div class="base_box">
+  <div class="container">
+    <div class="base_in clearfix">
+      <div class="base_left right wow fadeInUp" data-wow-delay="0.5s">
+        <div class="base_in_pic">
+          <img
+            src="http://bek.com.cn/public/upload/images/2019/10/29/f35eacff35170a841b14a7784e0ea02e.jpg"
+            alt=""
+          />
+        </div>
+        <div class="base_in_dec">
+          <div class="base_in_text left">环境展示</div>
+          <div class="base_in_handle right">
+            <a href="javascript:;" class="prev_btn"
+              ><span class="glyphicon glyphicon-arrow-left"></span
+            ></a>
+            <a href="javascript:;" class="next_btn"
+              ><span class="glyphicon glyphicon-arrow-right"></span
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="base_right right">
+        <div class="base_right_t wow fadeInUp" data-wow-delay="0.6s">
+          <h2>Environment Show</h2>
+          <p>环境展示 <span class="base_line"></span></p>
+        </div>
+        <div class="base_list">
+          <ul class="base_list_in clearfix wow fadeInUp" data-wow-delay="0.6s">
+            <li class="base_list_item active">
+              <a href="javascript:;">
+                <img
+                  src="http://bek.com.cn/public/upload/images/2019/10/29/f35eacff35170a841b14a7784e0ea02e.jpg"
+                  alt=""
+                />
+                <p class="base_name">环境展示</p>
+              </a>
+            </li>
+
+            <li class="base_list_item">
+              <a href="javascript:;">
+                <img
+                  src="http://bek.com.cn/public/upload/images/2019/10/29/35a24e64d2d94a3982e5888e3d5fee10.jpg"
+                  alt=""
+                />
+                <p class="base_name">环境展示</p>
+              </a>
+            </li>
+
+            <li class="base_list_item">
+              <a href="javascript:;">
+                <img
+                  src="http://bek.com.cn/public/upload/images/2019/10/29/d40a1a804dbebc38376b5db2c5781d11.jpg"
+                  alt=""
+                />
+                <p class="base_name">环境展示</p>
+              </a>
+            </li>
+
+            <li class="base_list_item">
+              <a href="javascript:;">
+                <img
+                  src="http://bek.com.cn/public/upload/images/2019/11/06/4d8beee36e213a4b73c79a5d7f8319a0.png"
+                  alt=""
+                />
+                <p class="base_name">环境展示</p>
+              </a>
+            </li>
+
+            <li class="base_list_item">
+              <a href="javascript:;">
+                <img
+                  src="http://bek.com.cn/public/upload/images/2019/11/06/e6c12403339b963bab8de89a97eafec9.png"
+                  alt=""
+                />
+                <p class="base_name">环境展示</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 新闻 -->
+<div class="news_box">
+  <div class="news_in container clearfix">
+    <div class="news_show left wow fadeInLeft" data-wow-delay="0.5s">
+      <a href="#">
+        <p class="news_show_time">10-25</p>
+        <h2 class="news_show_title">什么是医药中间体？</h2>
+        <p class="news_show_dec">
+          医药中间体，实际上是一些用于药品合成工艺过程中的一些化工原料或化工产品。这种化工产品，不需要药品的生产许可证，在普通的化工厂即可生产，只要达到一些的级别，即可用于药品的合成。我国每年约需与化工配套的原料和中间体2000多种，需求量达250万吨以上。经过多年的发展，我国医药生产所需的化工原料和中间体基本能够配套，...
+        </p>
+        <!-- <div class="news_show_pic">
+            <img src="http://bek.com.cn/public/upload/article/2019/10/25/af370a5796f94b085ebc85c126629872.jpg" alt="">
+        </div> -->
+      </a>
+    </div>
+    <div class="news_list left wow fadeInRight" data-wow-delay="0.5s">
+      <ul class="news_list_in">
+        <li class="news_list_item">
+          <a href="#">
+            <div class="news_item_top clearfix">
+              <h2 class="title left">什么是医药中间体？</h2>
+              <span class="time right">10-25</span>
+            </div>
+            <div class="news_item_bot">
+              <p class="dec">医药中间体，实际上是一些用于药品合成工...</p>
+              <span class="arrow"
+                ><span class="glyphicon glyphicon-arrow-right"></span
+              ></span>
+            </div>
+          </a>
+        </li>
+        <li class="news_list_item">
+          <a href="#">
+            <div class="news_item_top clearfix">
+              <h2 class="title left">显色剂的一般分类</h2>
+              <span class="time right">10-25</span>
+            </div>
+            <div class="news_item_bot">
+              <p class="dec">
+                显色剂有两类：通用显色剂和特效显色剂。根据被检...
+              </p>
+              <span class="arrow"
+                ><span class="glyphicon glyphicon-arrow-right"></span
+              ></span>
+            </div>
+          </a>
+        </li>
+        <li class="news_list_item">
+          <a href="#">
+            <div class="news_item_top clearfix">
+              <h2 class="title left">间甲苯胺丙磺酸钠</h2>
+              <span class="time right">10-25</span>
+            </div>
+            <div class="news_item_bot">
+              <p class="dec">产品名称:间甲苯胺丙磺酸钠简称:TODP英文名...</p>
+              <span class="arrow"
+                ><span class="glyphicon glyphicon-arrow-right"></span
+              ></span>
+            </div>
+          </a>
+        </li>
+        <li class="news_list_item">
+          <a href="#">
+            <div class="news_item_top clearfix">
+              <h2 class="title left">招聘：实验员</h2>
+              <span class="time right">10-29</span>
+            </div>
+            <div class="news_item_bot">
+              <p class="dec">Ⅰ、要求：1、有机化学、药物化学等与化学合成相...</p>
+              <span class="arrow"
+                ><span class="glyphicon glyphicon-arrow-right"></span
+              ></span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 <!-- 联系 -->
 <div class="contact_box">
   <div class="container">
@@ -96,11 +665,127 @@
     </div>
   </div>
 </div>
-
 {{/block}} 
 
+
 {{block "script"}}
+<script src="/public/js/flexible.js"></script>
+<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<!-- <script src="/public/js/swiper.min.js"></script> -->
+<script src="http://bek.com.cn/template/pc/style/js/swiper.jquery.min.js"></script>
+<script src="http://bek.com.cn/template/pc/style/js/wow.min.js"></script>
 <script src="/public/js/swiper.js"></script>
+<!-- <script src="http://bek.com.cn/template/pc/style/js/common.js"></script> -->
+<script>
+  var swiper = new Swiper("#banner_in", {
+    loop: "true",
+    autoplay: {
+      disableOnInteraction: false /*解决拖动之后图片仍然能够自动轮播的功能*/,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+</script>
+<!-- 关于我们 -->
+<script>
+  $(function () {
+    $(".about_list_item").mouseout(function () {
+      $(".about_list_item").removeClass("active");
+    });
+    $(".about_list_item").mouseover(function () {
+      $(this).addClass("active").siblings().removeClass("active");
+    });
+  });
+</script>
+<!-- 产品展示 -->
+<script>
+  // go_icon
+  $(".pro_item").mouseout(function () {
+    $(".pro_item").removeClass("active");
+  });
+  $(".pro_item").mouseover(function () {
+    $(this).addClass("active").siblings().removeClass("active");
+  });
+
+  $(".tab_show a").on("touchstart mousedown", function (e) {
+    e.preventDefault();
+    $(".tab_show .active").removeClass("active");
+    $(this).addClass("active");
+    $("#tabs_container .tab_item")
+      .eq($(this).index())
+      .addClass("active")
+      .siblings()
+      .removeClass("active");
+  });
+  $(".tab_show a").click(function (e) {
+    e.preventDefault();
+  });
+</script>
+<!-- 环境展示 -->
+<script>
+  $(function () {
+    this.prevBtn = $(".prev_btn");
+    this.nextBtn = $(".next_btn");
+    var list = $(".base_list_in li");
+    var _this = this;
+    var showImg = $(".base_in_pic img");
+    var showText = $(".base_in_text");
+
+    list.mouseout(function () {
+      list.removeClass("active");
+    });
+    list.mouseover(function () {
+      $(this).addClass("active").siblings().removeClass("active");
+    });
+
+    // 鼠标移入图片改变
+    this.num = 0;
+    list.hover(function () {
+      var index = $(this).index();
+      _this.num = index;
+      var curImgSrc = $(this).find("img").attr("src");
+      var curText = $(this).find(".base_name").text();
+
+      showImg.attr("src", curImgSrc);
+      showText.text(curText);
+    });
+    // 右移
+    this.nextBtn.on("click", function () {
+      _this.num++;
+      // 比较li的长度，右移是--
+      if (_this.num >= list.length) {
+        _this.num--;
+        return;
+      }
+      list.eq(_this.num).addClass("active").siblings().removeClass("active");
+      // 通过改变图片的src
+      var curImgSrc = list.eq(_this.num).find("img").attr("src");
+      var curText = list.eq(_this.num).find(".base_name").text();
+      //把改变图片的src放到显示的大图上
+      showImg.attr("src", curImgSrc);
+      showText.text(curText);
+    });
+    // 左移
+    this.prevBtn.on("click", function () {
+      _this.num--;
+      if (_this.num < 0) {
+        _this.num = 0;
+        return;
+      }
+      list.eq(_this.num).addClass("active").siblings().removeClass("active");
+      var curImgSrc = list.eq(_this.num).find("img").attr("src");
+      var curText = list.eq(_this.num).find(".base_name").text();
+
+      showImg.attr("src", curImgSrc);
+      showText.text(curText);
+    });
+  });
+</script>
+<script>
+  new WOW().init();
+</script>
 <script>
   var swiper = new Swiper(".swiper-container", {
     loop: "true",
