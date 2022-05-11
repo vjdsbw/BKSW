@@ -6,7 +6,6 @@ const router = express.Router();
 
 router.get("/news",(req,res)=>{
     res.render("news.html")
-
 })
 
 router.get("/cnews",(req,res)=>{
@@ -15,16 +14,19 @@ router.get("/cnews",(req,res)=>{
 router.get("/hnews",(req,res)=>{
     res.render("hnews.html")
 })
-router.get("/snews",async(req,res)=>{    
-    var id =req.query.id;
+router.get("/snews",async(req,res)=>{  
+    var id=req.query.id;  
     var mesa =await News.find();
     var mes=mesa[id-1];
     var temp = mes.frequency+1;
+
     News.updateOne({num:id},{frequency:temp},(err)=>{
         if(err) {
         console.log(err);
     }})
 console.log(mes);
     res.render("snews.html",{mes,mesa,id})
+
 })
+
 module.exports = router;
