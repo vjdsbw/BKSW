@@ -113,9 +113,10 @@ a, a:link, a:hover, a:visited, a:active {
     margin: 0 auto;
     /* margin-top: 3.125rem; */
     height: 458.8px;
-     width: 1190px; 
+    height: auto;
+    width: 1190px; 
     background-position: center bottom;
-    margin-top: 2.133rem;
+    margin-top: 150px;
     
 }
 .main p {
@@ -126,7 +127,7 @@ a, a:link, a:hover, a:visited, a:active {
     margin: auto;
     border: none;
     margin-top: 20px;
-    
+    margin-bottom: 30px;
   
 }
 .main .main_img img{
