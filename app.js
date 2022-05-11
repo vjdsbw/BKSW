@@ -12,7 +12,6 @@ const contact = require("./router/contact")
 const app=express();
 const port=3000;
 
-
 //挂载express-session中间件
 app.use(expressSession({
     name:"mazg",
@@ -26,7 +25,6 @@ app.use(expressSession({
 
 //使用mongoose.connect()方法连接数据库
 mongoose.connect("mongodb://localhost/beck");
-
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -49,15 +47,12 @@ app.use("/news",news)
 app.use("/contact",contact)
 
 
-app.use(product)
-
-
-
+// app.use(product)
 
 app.use((err,req,res,next)=>{
    res.send(err.message);
 })
 
-app.listen(3000, () => {
-    console.log("3000端口已启用")
+app.listen(port, () => {
+    console.log(`listening at http://localhost:${port}`);
 })

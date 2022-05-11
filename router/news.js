@@ -24,7 +24,6 @@ router.get("/snews",async(req,res)=>{
         console.log(err);
     }})
     res.render("snews.html",{mes,mesa,id})
-
 })
 
 module.exports = router;
