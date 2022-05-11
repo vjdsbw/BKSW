@@ -453,3 +453,16 @@ div {
     color: #009140;
     background: url("../img/back_icon.png") left center no-repeat;
 }
+
+@keyframes translateUl {
+    from {
+        transform: translateY(220px);
+    }
+ /* 这里将位置从0跳到-882，即一个div的宽度，但需要一直要在div内显示图片，所以将ul的宽度设为两倍div，并且再添加一组图片进去 */
+    to {
+        transform: translateY(0px);
+    }
+}
+.news_content ul li{
+  animation: translateUl 0.8s linear ;
+}

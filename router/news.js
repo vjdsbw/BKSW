@@ -4,6 +4,7 @@ const path = require("path")
 const mongoose = require("mongoose")
 const router = express.Router();
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 router.get("/news",(req,res)=>{
@@ -14,9 +15,18 @@ router.get("/cnews",(req,res)=>{
     res.render("news.html")
 })
 router.get("/cnews",(req,res)=>{
+=======
+router.get("/news",(req,res)=>{
+    res.render("news.html")
+>>>>>>> master
 
+})
 
+<<<<<<< HEAD
 >>>>>>> refs/remotes/origin/wangtao
+=======
+router.get("/cnews",(req,res)=>{
+>>>>>>> master
     res.render("cnews.html")
 })
 router.get("/hnews",(req,res)=>{
@@ -24,10 +34,15 @@ router.get("/hnews",(req,res)=>{
 })
 router.get("/snews",async(req,res)=>{    
     var id =req.query.id;
-    console.log(id);
     var mesa =await News.find();
     var mes=mesa[id-1];
+    console.log(mes.frequency);
+    var temp = mes.frequency+1;
+    News.updateMany({num:id},{frequency:temp},(err)=>{
+        if(err) {
+        console.log(err);
+    }})
+    console.log(temp);
     res.render("snews.html",{mes,mesa,id})
 })
-
 module.exports = router;

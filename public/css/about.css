@@ -37,7 +37,6 @@ dd {
 }
 img {
     border: none;
-    vertical-align: middle;
 }
 .pro_banner img {
     width: 100%;
@@ -112,21 +111,30 @@ a, a:link, a:hover, a:visited, a:active {
 
 .main{
     margin: 0 auto;
-    margin-top: 3.125rem;
+    /* margin-top: 3.125rem; */
     height: 458.8px;
-    width: 1190px;
+    height: auto;
+    width: 1190px; 
     background-position: center bottom;
-    margin-top: 120px;
+    margin-top: 150px;
+    
+}
+.main p {
+    font-size: 16px;
+    width: 100%;
 }
 .main .main_img{
     margin: auto;
     border: none;
     margin-top: 20px;
+    margin-bottom: 30px;
+  
 }
 .main .main_img img{
-    width: 1200px;
-    height: 294px;
-    vertical-align: middle;
+    width: 100%;
+    max-height: 294px;
+    height: auto;
+
 }
 
 
@@ -161,12 +169,7 @@ a, a:link, a:hover, a:visited, a:active {
         padding: 0 0.1rem;
     }
 }
-@media (max-width: 479px) {
- 
-}
-@media (min-width: 480px) and (max-width: 767px) {
-  
-}
+
 @media (min-width:768px) and (max-width:992px) {
     .pro_nav .pro_nav_title .en {
         font-size: 30px;
@@ -175,10 +178,6 @@ a, a:link, a:hover, a:visited, a:active {
         padding: 0;
         width: 3.2rem;
         margin-top: 0.14rem;
-    }
-    .main {
-        width: 100%;
-        padding: 0 0.1rem;
     }
     .pro_nav .pro_nav_title .name {
         font-size: 22px;
