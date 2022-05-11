@@ -19,13 +19,12 @@ router.get("/snews",async(req,res)=>{
     var id =req.query.id;
     var mesa =await News.find();
     var mes=mesa[id-1];
-    console.log(mes.frequency);
     var temp = mes.frequency+1;
-    News.updateMany({num:id},{frequency:temp},(err)=>{
+ 
+    News.updateOne({num:id},{frequency:temp},(err)=>{
         if(err) {
         console.log(err);
     }})
-    console.log(temp);
     res.render("snews.html",{mes,mesa,id})
 })
 module.exports = router;

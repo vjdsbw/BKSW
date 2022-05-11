@@ -12,6 +12,9 @@ frequency:{
 },
 content: {
     type: String,
+},
+num:{
+    type:Number
 }
 })
 
