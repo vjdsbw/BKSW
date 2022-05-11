@@ -17,9 +17,9 @@
         <p class="name">生化检验</p>
       </div>
       <div class="pro_nav_tab">
-        <a href="#">生化检验</a>
-        <a href="#">医药中间体</a>
-        <a href="#">材料化学</a>
+        <a href="/product/product?pageindex=1&page=sh">生化检验</a>
+        <a href="/product/product?pageindex=1&page=yy">医药中间体</a>
+        <a href="/product/product?pageindex=1&page=cl">材料化学</a>
       </div>
     </div>
   </div>
@@ -76,8 +76,12 @@
 <script>
  $(function () {
      var search = window.location.search;
-     var currentPage = search.split("=")[1];
-     var totalPage = parseInt($("#total").text())
+     console.log(search);
+     var currentPage = search.split("=")[1].split("&")[0];
+     var kind = search.split("=")[2];
+     console.log(kind);
+     if(kind){
+      var totalPage = parseInt($("#total").text())
      $(".pagination").bootstrapPaginator({
          //设置版本号
          bootstrapMajorVersion: 3,
@@ -85,11 +89,27 @@
          currentPage: currentPage,
          // 总页数
          totalPages: totalPage ,
-         numberOfPages: 5,                                  //显示
+         numberOfPages: 4,                                  //显示
+         pageUrl: function (type, page, current) {                                      //page是点击的页码
+             return "http://localhost:3000/product/product?pageindex=" + page+"&page="+kind
+         }
+     })
+     }
+  else{
+    var totalPage = parseInt($("#total").text())
+     $(".pagination").bootstrapPaginator({
+         //设置版本号
+         bootstrapMajorVersion: 3,
+         // 显示第几页
+         currentPage: currentPage,
+         // 总页数
+         totalPages: totalPage ,
+         numberOfPages: 10,                                  //显示
          pageUrl: function (type, page, current) {                                      //page是点击的页码
              return "http://localhost:3000/product/product?pageindex=" + page
          }
      })
+  }
  })
 </script>
 {{/block}}
