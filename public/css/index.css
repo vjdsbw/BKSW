@@ -146,25 +146,6 @@ input[type="text"] {
     z-index: 0;
 }
 
-/* #banner .swiper-pagination-bullet{
-    width:0.78rem;
-    height:0.08rem;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-    margin:0;
-    border:1px solid #fff;
-    background: none;
-    opacity:1;
-    border-right:none;
-    border-left:none;
-}
-  .swiper-slide img {
-    width: 100%;
-    display: block;
-    height: 100%;
-}
-
 /* 关于我们 */
 .about_wrap {
     padding   : 76px 0 76px;
