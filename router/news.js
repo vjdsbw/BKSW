@@ -22,7 +22,7 @@ router.get("/snews",async(req,res)=>{
     var mes=mesa[id-1];
     console.log(mes.frequency);
     var temp = mes.frequency+1;
-    News.updateOne({num:'{{id}}'},{frequency:temp},(err)=>{
+    News.update({num:id},{frequency:temp},(err)=>{
         if(err) {
         console.log(err);
     }})
