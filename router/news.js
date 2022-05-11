@@ -4,11 +4,9 @@ const path = require("path")
 const mongoose = require("mongoose")
 const router = express.Router();
 
+router.get("/news",(req,res)=>{
+    res.render("news.html")
 
-
-router.get("/news",async(req,res)=>{
-    var mess =await News.find();
-    res.render("news.html",{mess})
 })
 
 router.get("/cnews",(req,res)=>{
