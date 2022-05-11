@@ -1,0 +1,170 @@
+.aa {
+    width: 358px;
+    height: 358px;
+
+    border: 1px solid #ededed;
+}
+
+img:hover {
+    border-right-color: green;
+    border-bottom-color: green;
+    border-right-width: 8px;
+    border-bottom-width: 8px;
+}
+
+total {
+    width: 1200px;
+    height: 1446px;
+
+}
+
+#total .row div {
+    width: 360px;
+    height: 482px;
+    margin: 0 25px 0 0;
+    float: left;
+    position: relative;
+}
+
+.wenzi {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 16px;
+    color: #333;
+    display: block;
+
+}
+
+a:hover {
+    text-decoration: none;
+    color: #333
+}
+
+.tubiao {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 320px;
+    color: #009140;
+    display: none;
+}
+
+bb {
+    width: 25px;
+    height: 25px;
+}
+
+#total .row div:hover .tubiao {
+    display: block;
+}
+
+.shuzi {
+    height: 20px;
+    color: #e0e0e0;
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#total .row div p span {
+    width: 40px;
+    height: 2px;
+    background: #e0e0e0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* 导航图 */
+.pro_content_banner {
+    position: relative;
+    width: 100%;
+    margin-bottom: 150px;
+    color: #ffffff;
+}
+.pro_content_banner img{
+    vertical-align: middle;
+    width: 100%;
+}
+
+.pro_nav {
+    width: 100%;
+    height: 1.65rem;
+    background: url("/public/img/nav_bg.png") center center no-repeat;
+    /* background-size: auto; */
+    /* -webkit-background-size: cover;*/
+    background-size: cover; 
+    left: 0;
+    bottom: -0.83rem;
+    position: absolute;
+    padding-top: 0.36rem;
+    
+}
+
+.pro_nav_title .en {
+    color: #ffffff;
+    font-size: 0.4rem;
+    font-style: italic;
+    font-weight: bold;
+}
+.pro_nav_title {
+    position: relative;
+}
+
+.pro_nav_title .name {
+    display: inline-block;
+    font-size: 30px;
+    width: 2rem;
+    position: absolute;
+    left: 90px;
+    top: 40px;
+    
+}
+
+.pro_nav_tab {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    flex: 0 0 100%;
+    position: absolute;
+    left: 45%;
+    top: 60%;
+}
+.pro_nav_tab a {
+    flex: 0 0 33.33%;
+    color: #fff;
+    font-size: 16px;
+    padding-top: 20px;
+    padding-bottom: 28px;
+}
+
+.pro_nav_tab a:hover {
+    display: inline-block;
+    /* width: 110px;
+    height: 50px; */
+    background-color: #2ee87e;
+    text-align: center;
+    background-image: linear-gradient(#049542,#2ee87e);
+}
+
+
+
+@media (max-width: 767px) {
+    .pro_nav_title {
+        display: none
+    }
+    .pro_nav_tab {
+        width: 100%;
+        left: 40%;
+        top: 30%;
+
+    }
+    .pro_nav_tab a {
+        display: nline-block;
+        height: auto;
+        flex: 0 0 20%;
+        font-size: 12px;
+    }
+};
+

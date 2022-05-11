@@ -1,0 +1,340 @@
+* {
+    box-sizing: border-box;
+}
+
+element.style {
+    visibility : visible;
+    animation-name: fadeInUp;
+}
+
+
+body {
+    font-family: "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "宋体", simsun, sans-serif;
+    font-size  : 16px;
+    color      : #333333;
+}
+
+body,
+h2,
+ul,
+p,
+dl,
+h4,
+h5,
+h3,
+dl,
+dt,
+dd {
+    padding    : 0;
+    font-weight: normal;
+}
+
+.pro_content_banner {
+    position: relative;
+}
+.pro_banner {
+    width: 100%;
+    position: relative;
+}
+img {
+    border: none;
+    vertical-align: middle;
+}
+.pro_banner img {
+    width: 100%;
+}
+.pro_nav {
+    width: 100%;
+    height: 1.65rem;
+    background: url("/public/img/nav_bg.png") center center no-repeat;
+    background-size: auto;
+    /* -webkit-background-size: cover;
+    background-size: cover; */
+    left: 0;
+    bottom: -0.83rem;
+    position: absolute;
+    padding-top: 0.36rem;
+    z-index: 0;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.pro_nav .pro_nav_title {
+
+    /* padding: 0 0 0 0.9rem; */
+
+    padding: 0 0 0 0.3rem;
+
+    float: left;
+    width: 5rem;
+    color: #fff;
+    font-size: 30px;
+}
+
+.pro_nav .pro_nav_title .en {
+    font-size: 36px;
+    font-weight: bold;
+    font-style: italic;
+    padding-left: 0.3rem;
+}
+
+.pro_nav .pro_nav_title .name {
+    padding-left: 1.3rem;
+    margin-top: 0.1rem;
+}
+
+.pro_nav .pro_nav_tab {
+    float: left;
+}
+
+.honor_title {
+    display: none;
+}
+
+a {
+    color: #1baadb;
+}
+a, a:link, a:hover, a:visited, a:active {
+    text-decoration: none;
+    border: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+.pro_nav .pro_nav_tab a {
+    display: inline-block;
+    height: 1.04rem;
+    line-height: 1.2rem;
+    margin-top: 0.25rem;
+    color: #fff;
+    padding: 0 0.12rem;
+}
+.pro_nav .pro_nav_tab a.active, .pro_nav .pro_nav_tab a:hover {
+    background: url("/public/img/bg_line.png") repeat-x;
+}
+
+.honor_content, .recruit_box, .contact_content {
+    padding-top: 1.5rem;
+}
+
+ul {
+    list-style: none;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix::before, .clearfix::after {
+    display: table;
+    line-height: 0;
+    content: "";
+    clear: both;
+}
+
+.clearfix::before, .clearfix::after {
+    display: table;
+    line-height: 0;
+    content: "";
+    clear: both;
+}
+
+.honor_list {
+    margin: 0 -0.3rem 0 0;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+.honor_list .honor_item {
+    float: left;
+    background: #fff;
+    -webkit-box-shadow: 0 0 30px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 0 30px rgba(0,0,0,.1);
+    box-shadow: 0 0 30px rgba(0,0,0,.1);
+    width: 30%;
+    margin: 0 0.25rem 0.3rem 0;
+    padding: 0.18rem;
+    background: url("/public/img/base/bg.png") center top no-repeat;
+      background-size: auto;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.honor_list .honor_item.active{
+    background: url("/public/img/base/bg_active.png") center top no-repeat;
+}
+
+.honor_list .honor_item .honor_pic {
+    padding: 0.14rem;
+    text-align: center;
+    min-height: 2.48rem;
+    margin-bottom: 0.2rem;
+}
+
+.honor_list .honor_item .honor_pic img {
+    display: inline-block;
+    width: 100%;
+}
+
+.honor_list .honor_item .honor_name {
+    font-size: 16px;
+    color: #232323;
+    margin: 0.15rem 0;
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.honor_list .honor_item .honor_number {
+    color: #6e6e6e;
+    font-size: 14px;
+}
+
+.pages {
+    height: 60px;
+    padding: 20px 0 30px;
+    width: 100%;
+    clear: both;
+}
+
+@media screen and  (max-width: 767px){
+    .pro_nav {
+        background: #19b95f;
+        height: 0.6rem;
+        padding-top: 0;
+        bottom: -0.6rem;
+    } 
+    .container {
+        width: 100%;
+        padding: 0 0.1rem;
+    } 
+    .pro_nav .pro_nav_title {
+        display: none;
+    } 
+    .pro_nav .pro_nav_tab {
+        text-align: center;
+        width: 100%;
+        position: relative;
+        top: -0.2rem;
+    }  
+    .honor_title {
+        display: block;
+    }
+    .pro_nav .pro_nav_tab a {
+        margin-top: 0;
+        font-size: 16px;
+        height: 0.8rem;
+        line-height: 1rem;
+    }
+    .honor_list .honor_item {
+        width: 45%;
+        margin: 0 0.1rem 0.1rem 0;
+    }
+    .honor_list .honor_item, .honor_list .honor_item.active {
+        -webkit-background-size: contain;
+        background-size: contain;
+    }
+    .honor_list .honor_item .honor_pic {
+        min-height: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 479px) {
+    body {
+        font-size: 12px;
+    }
+    .honor_content {
+        padding-top: 0.9rem;
+    }
+    .honor_list {
+        margin: 0;
+    }
+    .honor_list .honor_item {
+        width: 100%;
+        margin: 0 0 0.2rem 0;
+    }
+    .honor_list .honor_item, .honor_list .honor_item.active {
+        -webkit-background-size: contain;
+        background-size: contain;
+    }
+    .honor_list .honor_item .honor_pic {
+        min-height: 1rem;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    body {
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    body {
+        font-size: 14px;
+    }
+    .container {
+        width: 750px;
+    }
+    .pro_nav .pro_nav_title {
+        padding: 0;
+        width: 3.2rem;
+        margin-top: 0.14rem;
+    }
+    .pro_nav .pro_nav_title .en {
+        font-size: 30px;
+    }
+    .pro_nav .pro_nav_title .name {
+        font-size: 22px;
+        padding-left: 0.5rem;
+    }
+    .honor_list .honor_item {
+        margin: 0 0.24rem 0.24rem 0;
+    }
+    .honor_list .honor_item, .honor_list .honor_item.active {
+        -webkit-background-size: contain;
+        background-size: contain;
+    }
+    .honor_list .honor_item .honor_pic {
+        min-height: 1rem;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px){
+    .container {
+        width: 970px;
+    }
+    .pro_nav .pro_nav_title {
+        padding: 0;
+        width: 4.2rem;
+    }
+    .honor_list .honor_item, .honor_list .honor_item.active {
+        -webkit-background-size: contain;
+        background-size: contain;
+    }
+    .honor_list .honor_item .honor_pic {
+        min-height: 2rem;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .container {
+        width: 1170px;
+    }
+}

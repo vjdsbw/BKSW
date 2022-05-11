@@ -1,0 +1,261 @@
+body {
+  font-family: "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "宋体", simsun, sans-serif;
+  font-size  : 16px;
+  background : #fff;
+  color      : #333333;
+  min-width  : 320px;
+  overflow-x : hidden;
+}
+
+* {
+  padding: 0;
+  margin : 0;
+}
+
+.collapse {
+  position: relative;
+}
+
+.navbar {
+  width           : 100%;
+  height          : 110px;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  position        : absolute !important;
+  margin-bottom   : 0 !important;
+  z-index         : 2;
+
+  animation: translateUL 0.5s linear 0s;
+
+}
+
+.navbar.affix {
+  position: fixed;
+  top     : 0;
+
+}
+
+.navbar .left {
+  position  : absolute;
+  left      : 5%;
+  margin-top: 20px;
+
+}
+
+.navbar .left ul li {
+  margin-left: 10px;
+  position   : relative;
+}
+
+.navbar .logo {
+  width           : 180px;
+  height          : 110px;
+  border-radius   : 50%/50%;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  position        : absolute;
+  left            : 41%;
+  top             : 20px;
+}
+
+.navbar .logo img {
+  padding-left: 10px;
+  margin      : 0 !important;
+}
+
+.navbar .right {
+  position  : absolute;
+  left      : 62%;
+  margin-top: 20px;
+}
+
+.navbar .right ul li {
+  position: relative;
+}
+
+.nav_en {
+  font-size : 12px;
+  margin    : 0.1rem 0 0.1rem 0;
+  color     : #888888;
+  text-align: center;
+}
+
+.clearfix::before,
+.clearfix::after {
+  display    : table;
+  line-height: 0;
+  content    : "";
+  clear      : both;
+}
+
+ul {
+  list-style: none;
+}
+
+body,
+h2,
+ul,
+p,
+dl,
+h4,
+h5,
+h3,
+dl,
+dt,
+dd {
+  padding    : 0;
+  margin     : 0;
+  font-weight: normal;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.left .nav li a {
+  display   : block;
+  padding   : -0.35rem 0.25rem 0.2rem 0.25rem;
+  color     : #333;
+  text-align: center;
+  position  : relative;
+}
+
+.right .nav li a {
+  display   : block;
+  padding   : -0.35rem 0.25rem 0.2rem 0.25rem;
+  color     : #333;
+  text-align: center;
+  position  : relative;
+}
+
+.left .nav li a:hover {
+  color: #009140;
+}
+
+.left .nav li a:hover .nav_dot {
+  width                : 0.05rem;
+  height               : 0.05rem;
+  background           : #009140;
+  -webkit-border-radius: 30px;
+  -moz-border-radius   : 30px;
+  border-radius        : 30px;
+  position             : absolute;
+  left                 : 50%;
+  bottom               : 0.15rem;
+  margin-left          : -0.03rem;
+}
+
+.right .nav li a:hover .nav_dot {
+  width                : 0.05rem;
+  height               : 0.05rem;
+  background           : #009140;
+  -webkit-border-radius: 30px;
+  -moz-border-radius   : 30px;
+  border-radius        : 30px;
+  position             : absolute;
+  left                 : 50%;
+  bottom               : 0.15rem;
+  margin-left          : -0.03rem;
+}
+
+.right .nav li a:hover {
+  color: #009140;
+}
+
+a,
+a:link,
+a:hover,
+a:visited,
+a:active {
+  text-decoration            : none;
+  border                     : none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  outline                    : none;
+}
+
+@keyframes translateUL {
+  from {
+    transform: translateY(-110px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.header_small {
+  display   : none;
+  background: rgba(255, 255, 255, .8);
+  position  : fixed;
+  left      : 0;
+  top       : 0;
+  width     : 100%;
+  z-index   : 1010;
+  animation : translateSmall 0.5s linear 0s;
+}
+
+@media (max-width: 767px) {
+  .logo {
+    display: none;
+  }
+
+  .header_small {
+    display   : block;
+    background: rgba(255, 255, 255, .8);
+    position  : fixed;
+    left      : 0;
+    top       : 0;
+    width     : 100%;
+    z-index   : 1010;
+    animation : translateSmall 0.5s linear 0s;
+  }
+
+  .header_small ul {
+    margin-top: 20px;
+  }
+
+  .header_small_nav li a {
+    display    : block;
+    color      : #333;
+    font-size  : 16px;
+    text-align : center;
+    padding-top: 20px;
+  }
+
+
+  @keyframes translateSmall {
+    from {
+      transform: translateY(-340px);
+    }
+
+    /* 这里将位置从0跳到-882，即一个div的宽度，但需要一直要在div内显示图片，所以将ul的宽度设为两倍div，并且再添加一组图片进去 */
+    to {
+      transform: translateY(0px);
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {}
+
+@media screen and(min-width: 992px) and (max-width: 1199px) {
+  .header_nav ul li a {
+    padding: 0.35rem 0.01rem 0.2rem 0.01rem;
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+  .navbar .right {
+    position: absolute;
+    left    : 74%;
+  }
+
+  .navbar .left {
+    position: absolute;
+    left    : 8%;
+  }
+
+  .navbar .logo {
+    position: absolute;
+    left    : 42.5%;
+  }
+}

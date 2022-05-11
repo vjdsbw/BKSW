@@ -1,9 +1,9 @@
 const express = require("express");
 const Product = require("../model/product")
 const path = require("path")
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
+const { get } = require("http");
 const router = express.Router();
-
 
 router.get("/product", async (req, res) => {
     const { pageindex = 1, limit = 9 } = req.query;
@@ -25,6 +25,11 @@ router.get("/product", async (req, res) => {
     })
 
 
+})
+
+
+router.get("/product2",(req,res)=>{
+    res.render("product2.html")
 })
 
 
