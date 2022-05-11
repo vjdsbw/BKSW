@@ -46,9 +46,10 @@ img {
 .pro_nav {
     width: 100%;
     height: 1.65rem;
-    background: url("/public/img/base/nav_bg.png") center center no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
+    background: url("/public/img/nav_bg.png") center center no-repeat;
+    background-size: auto;
+    /* -webkit-background-size: cover;
+    background-size: cover; */
     left: 0;
     bottom: -0.83rem;
     position: absolute;
@@ -61,7 +62,11 @@ img {
 }
 
 .pro_nav .pro_nav_title {
-    padding: 0 0 0 0.94rem;
+
+    /* padding: 0 0 0 0.9rem; */
+
+    padding: 0 0 0 0.3rem;
+
     float: left;
     width: 5rem;
     color: #fff;
@@ -72,10 +77,12 @@ img {
     font-size: 36px;
     font-weight: bold;
     font-style: italic;
+    padding-left: 0.3rem;
 }
 
 .pro_nav .pro_nav_title .name {
-    padding-left: 1.5rem;
+    padding-left: 1.3rem;
+    margin-top: 0.1rem;
 }
 
 .pro_nav .pro_nav_tab {
@@ -105,7 +112,7 @@ a, a:link, a:hover, a:visited, a:active {
     padding: 0 0.12rem;
 }
 .pro_nav .pro_nav_tab a.active, .pro_nav .pro_nav_tab a:hover {
-    background: url("/public/img/base/bg_line.png") repeat-x;
+    background: url("/public/img/bg_line.png") repeat-x;
 }
 
 .honor_content, .recruit_box, .contact_content {

@@ -1,0 +1,253 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+ /* 图标 */
+@font-face {
+    font-family: "bekfont";
+    src: url(../contactfont_m6zni6msgnp/iconfont.ttf);
+}
+.bekiconfont {
+    font-family: "bekfont";
+    font-size: 30px;
+    flood-color: #ffffff;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.pro_content_banner {
+    position: relative;
+    width: 100%;
+    /* height: 475px; */
+}
+.pro_content_banner img{
+    vertical-align: middle;
+    width: 100%;
+}
+
+.pro_nav {
+    width: 100%;
+    height: 1.65rem;
+    background: url("/public/img/nav_bg.png") center center no-repeat;
+    background-size: auto;
+    /* -webkit-background-size: cover;
+    background-size: cover; */
+    left: 0;
+    bottom: -0.83rem;
+    position: absolute;
+    padding-top: 0.36rem;
+    z-index: 0;
+}
+
+
+
+.pro_nav_title .en {
+    color: #ffffff;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+}
+.pro_nav_title {
+    position: relative;
+}
+
+.pro_nav_title .name {
+    display: inline-block;
+    font-size: 24px;
+    color: #ffffff;
+    height: 28px;
+    width: 150px;
+    background-color: #009140;
+    padding-left: 30px;
+    position: absolute;
+   top: 50px;
+   left: 70px;
+}
+.contact_title .container {
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+.contact_content .container .contact_title_text{
+    width: 100%;
+    height: 35px;
+    border-top: 6px solid black;
+    margin-top: 60px;
+    position: relative;
+    right: -15px;
+}
+.contact_content .container .contact_title_text span {
+    width: 165px;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+    color: black;
+    background-color: #ffffff;
+    position: absolute;
+    top: -20px;
+    left: -30px;
+}
+ /* 联系地址  */
+.contact_address_item {
+    height: 40px;
+    position: relative;
+    left: -15px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+}
+.contact_address_item .bekiconfont {
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #ffffff;
+    background-color: #009140;
+}
+.contact_address_item div {
+    display: inline-block;
+    padding-left: 20px;
+    vertical-align: middle;
+    
+}
+.contact_address_item div p:nth-child(2n-1) {
+    font-size: 14px;
+}
+.contact_address_item div p:nth-child(2n) {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+
+/* 扫描二维码 平台 */
+.platform {
+    width: 100%;
+    height: 198px;
+}
+.platform p {
+
+    color: #ffffff;
+    font-size: 14px;
+    font-family: "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "宋体", simsun, sans-serif;;
+    padding: 1px;
+}
+
+.platform .container .wechat {
+    /* width: 500px; */
+    height: 198px;
+    background-color: #ee8913;
+}
+.platform .container .weibo {
+    /* width: 500px; */
+    height: 198px;
+    background-color: #009140;
+}
+
+.wechat {
+    position: relative;
+}
+.wechat .wechat_left {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+.wechat img {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+.wechat .wechat_left .bekiconfont {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #ee8913;
+    line-height: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+.weibo {
+    position: relative;
+}
+.weibo .weibo_left {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+.weibo .weibo_left .bekiconfont {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    font-size: 36px;
+    color: #009140;
+    line-height: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.weibo img{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+.map {
+    width: 100%;
+    margin-top:40px;
+    margin-bottom: 40px;
+}
+.map .container {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.map_adr {
+    width: 100%;
+   flex: 1;
+    height: 405px;
+    height: auto;
+
+}
+
+@media (max-width: 768px) {
+    .pro_nav_title {
+        display: none
+    }
+};
+
+/* 动画 */
+.call {
+    animation-delay: 0.1s;
+}
+.email {
+    animation-delay: 0.3s;
+}
+.adress {
+    animation-delay: 0.6s;
+}
+.wechat {
+    animation-delay: 1.0s;
+}
+.weibo {
+    animation-delay: 1.5s;
+}
+.map_adr {
+    animation-delay: 2s;
+}
+
+
+
+
+
+

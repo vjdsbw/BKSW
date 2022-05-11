@@ -1,0 +1,77 @@
+.aa {
+    width: 358px;
+    height: 358px;
+
+    border: 1px solid #ededed;
+}
+
+img:hover {
+    border-right-color: green;
+    border-bottom-color: green;
+    border-right-width: 8px;
+    border-bottom-width: 8px;
+}
+
+total {
+    width: 1200px;
+    height: 1446px;
+
+}
+
+#total .row div {
+    width: 360px;
+    height: 482px;
+    margin: 0 25px 0 0;
+    float: left;
+    position: relative;
+}
+
+.wenzi {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 16px;
+    color: #333;
+    display: block;
+
+}
+
+a:hover {
+    text-decoration: none;
+    color: #333
+}
+
+.tubiao {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 320px;
+    color: #009140;
+    display: none;
+}
+
+bb {
+    width: 25px;
+    height: 25px;
+}
+
+#total .row div:hover .tubiao {
+    display: block;
+}
+
+.shuzi {
+    height: 20px;
+    color: #e0e0e0;
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#total .row div p span {
+    width: 40px;
+    height: 2px;
+    background: #e0e0e0;
+    display: inline-block;
+    vertical-align: middle;
+}
