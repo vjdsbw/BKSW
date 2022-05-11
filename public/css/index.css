@@ -1,11 +1,13 @@
 html {
     font-size: 625%;
 }
+
 element.style {
-    visibility: visible;
+    visibility     : visible;
     animation-delay: 0.5s;
-    animation-name: fadeInUp;
+    animation-name : fadeInUp;
 }
+
 body {
     font-family: "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "宋体", simsun, sans-serif;
     font-size  : 16px;
@@ -126,12 +128,36 @@ input[type="text"] {
 
 /* 轮播图 */
 .swiper-container {
-    width: 100%;
+    width : 100%;
     height: 5.3rem;
 }
-  .swiper-slide {
+
+.swiper-slide {
     text-align: center;
-    font-size: 18px;
+    font-size : 18px;
+}
+
+#banner {
+    width: 200%;
+}
+
+#banner img {
+    width  : 100%;
+    z-index: 0;
+}
+
+/* #banner .swiper-pagination-bullet{
+    width:0.78rem;
+    height:0.08rem;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    margin:0;
+    border:1px solid #fff;
+    background: none;
+    opacity:1;
+    border-right:none;
+    border-left:none;
 }
   .swiper-slide img {
     width: 100%;
@@ -224,6 +250,56 @@ input[type="text"] {
 .about_list_box .about_list_item.active .about_list_name {
     color: #ee8913;
 }
+
+/* 关于我们的媒体查询 */
+@media (min-width:768px)and(max-width:991px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (max-width:767px) {
+    .container {
+        width  : 100%;
+        padding: 0 10px;
+    }
+}
+
+/* @media (max-width:767px) {
+    body {
+        font-size: 12px;
+    }
+
+    .about .about_top .about_title {
+        height: 60px;
+    }
+
+    .about_list_box {
+        padding: 20px 50px 0 50px;
+    }
+
+    .about_list_box .about_list {
+        margin: 0;
+    }
+
+    .about_list_box .about_list_item {
+        width : 50%;
+        margin: 0 20px 20px 0;
+    }
+
+    .about_list_box .about_list_item .about_list_pic {
+        margin-bottom: 10px;
+    }
+
+    .about_list_box .about_list_item .about_list_name {
+        font-size: 16px;
+    }
+
+    .about .about_dec {
+        font-size    : 14px;
+        margin-bottom: 10px;
+    }
+} */
 
 /* 产品展示 */
 .products_show {
@@ -575,6 +651,7 @@ input[type="text"] {
     background-color: #fafafa;
 
 }
+
 .news_in .news_list .news_list_item a {
     display: block;
 
@@ -625,10 +702,10 @@ input[type="text"] {
 }
 
 .news_in .news_list .news_list_item .news_item_top .time {
-    font-size : 14px;
-    color     : #5d5d5d;
+    font-size    : 14px;
+    color        : #5d5d5d;
     /* width     : 16%; */
-    text-align: right;
+    text-align   : right;
 }
 
 .news_item_bot {
@@ -692,64 +769,72 @@ input[type="text"] {
 
 /* 联系我们 */
 .contact_box {
-    height: 2.75rem;
+    height  : 2.75rem;
     position: relative;
 }
+
 .contact_box::before {
-    content: '';
-    height: 3rem;
-    position: absolute;
+    content   : '';
+    height    : 3rem;
+    position  : absolute;
     background: url("/public/img/contact_bg2.png") right top;
-    right: 0;
-    top: -0.96rem;
-    width: 100%;
+    right     : 0;
+    top       : -0.96rem;
+    width     : 100%;
 }
- .container{
+
+.container {
     margin: 0 auto;
 }
-.contact_box_in{
-    width: 100%;
+
+.contact_box_in {
+    width   : 100%;
     position: relative;
 }
+
 .contact_in {
-    height: 3.29rem;
-    width: 100%;
+    height    : 3.29rem;
+    width     : 100%;
     background: url("/public/img/contact_bg.png") center top no-repeat;
-    position: absolute;
-    left: 0;
-    top: -0rem; 
-    z-index: 1100;
+    position  : absolute;
+    left      : 0;
+    top       : -0rem;
+    z-index   : 1100;
 }
+
 .contact_in .contact_tit {
-    font-size: 48px;
-    color: #fff;
-    font-weight: bold;
-    font-style: italic;
-    padding: 0.46rem 0 0 0.3rem;
-    display: inline-block;
+    font-size    : 48px;
+    color        : #fff;
+    font-weight  : bold;
+    font-style   : italic;
+    padding      : 0.46rem 0 0 0.3rem;
+    display      : inline-block;
     border-bottom: 0.04rem solid #fff;
 }
+
 .contact_in .contact_type {
     padding-left: 0.4rem;
 }
 
 .fadeInUp {
     -webkit-animation-name: fadeInUp;
-    animation-name: fadeInUp;
+    animation-name        : fadeInUp;
 }
+
 .animated {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
+    -webkit-animation-duration : 1s;
+    animation-duration         : 1s;
     -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
+    animation-fill-mode        : both;
 }
+
 .contact_in .contact_type_item {
-    display: inline-block;
-    margin-top: 0.4rem;
+    display     : inline-block;
+    margin-top  : 0.4rem;
     margin-right: 0.45rem;
-    color: #fff;
-    position: relative;
-    font-size: 16px;
+    color       : #fff;
+    position    : relative;
+    font-size   : 16px;
     padding-left: 0.6rem;
 }
 
@@ -763,95 +848,109 @@ input[type="text"] {
     background: url("/public/img/contact_icon.png") 0 0 no-repeat;
 } */
 
-.contact_in .contact_type_item p{
+.contact_in .contact_type_item p {
     font-size: 14px;
 }
 
 .contact_in .contact_type_item .contact_icon_qq {
     background-position: 0 -0.5rem;
 }
+
 .contact_in .contact_type_item .contact_icon_phone {
     background-position: 0 -1rem;
-}  
+}
+
 .contact_in .contact_type_item .contact_icon {
-    width: 0.4rem;
-    height: 0.4rem;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    margin-top: -0.2rem;
-    background: url("/public/img/contact_icon.png") 0 0 no-repeat;
+    width                : 0.4rem;
+    height               : 0.4rem;
+    position             : absolute;
+    left                 : 0;
+    top                  : 50%;
+    margin-top           : -0.2rem;
+    background           : url("/public/img/contact_icon.png") 0 0 no-repeat;
     background-position-x: 0px;
     background-position-y: 10px;
 }
+
 .contact_in .contact_type_item .contact_icon-qq {
-    width: 0.4rem;
-    height: 0.4rem;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    margin-top: -0.2rem;
-    background: url("/public/img/contact_icon.png") 0 0 no-repeat;
+    width                : 0.4rem;
+    height               : 0.4rem;
+    position             : absolute;
+    left                 : 0;
+    top                  : 50%;
+    margin-top           : -0.2rem;
+    background           : url("/public/img/contact_icon.png") 0 0 no-repeat;
     background-position-x: 0px;
     background-position-y: -40px;
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
     .container {
-        width: 100%;
+        width  : 100%;
         padding: 0 0.1rem;
     }
+
     .contact_in {
-        background: #ee8913;
-        height: auto;
+        background    : #ee8913;
+        height        : auto;
         padding-bottom: 0.3rem;
     }
+
     .contact_in .contact_type_item {
         margin-right: 0.15rem;
     }
-    .contact_box::before{
+
+    .contact_box::before {
         height: 4.2rem;
     }
 }
 
-@media (max-width: 479px){
+@media (max-width: 479px) {
     body {
         font-size: 12px;
     }
+
     .contact_in .contact_type_item {
-        width: 100%;
+        width       : 100%;
         margin-right: 0;
     }
-    .contact_box::before{
+
+    .contact_box::before {
         height: 7rem;
     }
-    .contact_box{
+
+    .contact_box {
         height: 6rem;
     }
-    
+
 }
 
-@media (min-width: 480px) and (max-width: 767px){
+@media (min-width: 480px) and (max-width: 767px) {
     body {
         font-size: 13px;
     }
 }
-@media (min-width: 768px) and (max-width: 991px){
+
+@media (min-width: 768px) and (max-width: 991px) {
     body {
         font-size: 14px;
     }
+
     .container {
         width: 750px;
     }
-    .contact_box::before{
+
+    .contact_box::before {
         height: 4rem;
     }
 }
-@media (min-width: 992px) and (max-width: 1199px){
+
+@media (min-width: 992px) and (max-width: 1199px) {
     .container {
         width: 970px;
     }
-    .contact_box::before{
+
+    .contact_box::before {
         height: 4rem;
     }
 }
@@ -860,10 +959,12 @@ input[type="text"] {
     .container {
         width: 1170px;
     }
-    .contact_box::before{
+
+    .contact_box::before {
         height: 2.8rem;
     }
-    .contact_in{
+
+    .contact_in {
         height: 3.29rem;
     }
 }
