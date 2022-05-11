@@ -2,14 +2,14 @@ const express = require("express");
 const Product = require("../model/product")
 const path = require("path")
 const mongoose = require("mongoose");
-const { get } = require("http");
 const router = express.Router();
 
 router.get("/product", async (req, res) => {
-    const { pageindex = 1, limit = 9 } = req.query;
-    var skip = (pageindex - 1) * limit
-    let result = await Product.find().skip(skip).limit(limit);
 
+    console.log(result3);
+    const { pageindex = 1, limit = 9 } = req.query;
+    var skip = (pageindex - 1) * limit;
+    let result = await Product.find().skip(skip).limit(limit);
     let result2 = await Product.aggregate([
         {
             $group: {
