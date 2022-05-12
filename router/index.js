@@ -40,7 +40,6 @@ router.get("/news/cnews",(req,res)=>{
 })
 router.get("/news/hnews",(req,res)=>{
     res.render("hnews.html");
-
 })
 
 
