@@ -13,9 +13,18 @@
   <div class="pro_nav">
     <div class="container">
       <div class="pro_nav_title">
-        <h2 class="en"></h2>
-        <p class="name">生化检验</p>
+        <h2 class="en">{{if !page1}}PRODUCTS{{/if}}</h2>
+        <p class="name">{{if page1=='sh'}}
+          生化检验
+          {{else if page1=='yy'}}
+          医药中间体
+          {{else if  page1=='cl'}}
+            材料化学
+            {{else}}
+            产品展示
+          {{/if}}</p>
       </div>
+
       <div class="pro_nav_tab">
         <a href="/product/product?pageindex=1&page=sh">生化检验</a>
         <a href="/product/product?pageindex=1&page=yy">医药中间体</a>
@@ -36,7 +45,7 @@
           <img src="/public/img/pro-img/{{$value.img}}" alt="" class="aa"/>
         </a>
         <a href="" class="wenzi">{{$value.CName}}</a>
-
+ 
       <p class="shuzi">
         14
         <span class="line"></span>

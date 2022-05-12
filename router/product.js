@@ -22,7 +22,7 @@ if(req.query.page){
       },
     ]);
 
-    console.log(result2);
+  var page1=req.query.page;
     var totalPage;
     // 根据page的不同类计算总页数
     switch(req.query.page){
@@ -35,6 +35,7 @@ if(req.query.page){
     res.render("product.html", {
       products: result,
       totalPage: totalPage,
+     page1
     });
 }
 else{
