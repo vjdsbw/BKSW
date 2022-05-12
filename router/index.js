@@ -1,15 +1,24 @@
 const express = require("express");
 const  News= require("../model/news")
+const Product = require("../model/product");
+const path = require("path");
+const mongoose = require("mongoose");
 const router = express.Router();
 
-// router.get("/", (req, res) => {
-//     res.redirect("/index")
-// })
+router.get("/", async (req, res) => {
+   res.redirect("/index")
+})
 
-router.get("/index", (req, res) => {
-    var page = req.query.page;
-    console.log(page);
-    res.render("index.html");
+router.get("/index", async(req, res) => {
+    let result = await Product.find({page:req.query.page}).skip(0).limit(6);
+    var page=req.query.page;
+    // console.log(page)
+    switch(page){
+        case 'sh':result;break;
+        case 'yy':result;break;
+        case 'cl':result;break;
+      }
+    res.render("index.html",{products: result});
 })
 
 router.get("/contact",(req,res)=>{
