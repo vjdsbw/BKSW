@@ -17,6 +17,10 @@ router.get("/about",(req,res)=>{
     res.render("about.html")
 })
 
+router.get("/snews",(req,res)=>{
+    res.render("news.html")
+})
+
 router.get("/Corporatestyle",(req,res)=>{
     res.render("base.html");
 
@@ -40,7 +44,6 @@ router.get("/news/cnews",(req,res)=>{
 })
 router.get("/news/hnews",(req,res)=>{
     res.render("hnews.html");
-
 })
 
 
