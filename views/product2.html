@@ -18,9 +18,9 @@
                 <p class="name">酶免显色剂、底物系列</p>
             </div>
             <div class="pro_nav_tab">
-                <a href="#">生化检验</a>
-                <a href="#">医药中间体</a>
-                <a href="#">材料化学</a>
+                <a href="/product/product?pageindex=1&page=sh">生化检验</a>
+                <a href="/product/product?pageindex=1&page=yy">医药中间体</a>
+                <a href="/product/product?pageindex=1&page=cl">材料化学</a>
             </div>
         </div>
     </div>
@@ -36,7 +36,7 @@
                         alt="">
                 </div>
                 <div class="pro_detail_dec right">
-                    <h2 class="detail_name">3,3',5,5'-四甲基联苯胺</h2>
+                    <h2 class="detail_name">{{image.CName}}</h2>
                     <ul class="detail_info">
                     </ul>
                     <div class="detail_contact">
@@ -57,25 +57,21 @@
                     </div>
                 </div>
                 <div class="pro_detail_con">
-                    <p><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 16px;">产品名称：3,3&#39;,5,5&#39;-四甲基联苯胺</span>
+                    <p><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 16px;">产品名称：{{image.CName}}</span>
                     </p>
-                    <p><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 16px;">简称： TMB</span></p>
-                    <p><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 16px;">英文名：
-                            3,3&#39;,5,5&#39;-Tetramethylbenzidine</span></p>
-                    <p><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 16px;">CAS： No.
-                            54827-17-7</span></p>
-                    <p><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 16px;">含量： 99.0%</span>
+                    <p><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 16px;">英文名: {{image.EName}}</span></p>
+                    <p><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 16px;">CAS： No. {{image.Cas}}</span></p>
+                    <p><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 16px;">含量：  {{image.content}}</span>
                     </p>
                     <p><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 16px;">结构式：</span></p>
-                    <p><img src="/public/img/pro-img/1-1-1.png"
+                    <p><img src="/public/img/pro-img/{{image.img}}"
                             title="" alt=""
                             width="350" height="220" style="width: 350px; height: 220px;" /></p>
-                    <p><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 16px;">分子式：
-                            C16H20N2</span></p>
-                    <p><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 16px;">分子量： 240.34</span>
+                <br>    <p><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 16px;">分子式： {{image.molecularFormula}}
+                            </span></p>
+                    <p><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 16px;">分子量： {{image.molecularWeight}}</span>
                     </p>
-                    <p><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 16px;">用途：
-                            过氧化物酶和乙型肝炎抗原的染色剂</span></p>
+                
                     <p><br /></p>
                 </div>
             </div>
@@ -83,10 +79,14 @@
 
         <!--翻页-->
         <div class="pro_detail_page">
-            <a class="page_item"><span>暂无</span>
-                <span class="color_d">PRO</span></a> <a href="/index.php/product/fgfd/30.html"
-                title="3,3',5,5'-四甲基联苯胺盐酸盐 " class="page_item"> <span class="color_g">NEXT</span>
-                <span>3,3',5,5'-四甲基联苯胺盐酸盐 </span></a> </a>
+            <span class="color_d">PRO</span></a> 
+            {{if imagep}}  <a class="page_item" href="/product/product2?id={{imagep.id}}"><span> 
+                    <span>{{imagep.CName}} </span></a> 
+            {{else}}    暂无{{/if]}}</span>
+              
+                {{if imagea}}
+                <a href="/product/product2?id={{imagea.id}}" class="page_item"> <span class="color_g">NEXT</span>
+                <span>{{imagea.CName}}</span></a> </a>{{/if}}
         </div>
     </div>
 </div>

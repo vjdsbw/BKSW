@@ -23,8 +23,10 @@ const productSchema = mongoose.Schema({
         },
         img:{
             type:String
-        }
-
+        },
+        id:{
+               type:Number
+       }
          })
        
  const Product = mongoose.model("product",productSchema,"product");
