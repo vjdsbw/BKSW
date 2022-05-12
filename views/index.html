@@ -120,96 +120,38 @@
         <h2 class="products_title_en">PRODUCTS</h2>
         <p class="products_title_name">产品展示</p>
       </div>
+      
       <div class="tab_show clearfix">
-        <a href="javascript:;" class="wow fadeInUp active" data-wow-delay="0.6s">生化检验</a>
-        <a href="javascript:;" class="wow fadeInUp" data-wow-delay="0.6s">医药中间体</a>
-        <a href="javascript:;" class="wow fadeInUp" data-wow-delay="0.6s">材料化学</a>
+        <a href="/index?page=sh" class="wow fadeInUp active" data-wow-delay="0.6s">生化检验</a>
+        <a href="/index?page=yy" class="wow fadeInUp" data-wow-delay="0.6s">医药中间体</a>
+        <a href="/index?page=cl" class="wow fadeInUp" data-wow-delay="0.6s">材料化学</a>
       </div>
+      
       <div class="tab_container wow fadeInUp" data-wow-delay="1s">
         <div class="tab_box clearfix" id="tabs_container">
-          <div class="tab_item active">
+
+          
+            <div class="tab_item active">
             <div class="pro_item_box clearfix">
               <a href="#" class="">
+                {{each products}}
                 <div class="pro_item">
                   <div class="pro_item_pic">
-                    <img src="http://bek.com.cn/public/upload/product/2019/11/06/8b51abeb032642c08952c59828c81c01.png"
-                      alt="">
+                    <img src="/public/img/pro-img/{{$value.img}}"
+                      alt=""> 
                   </div>
                   <div class="pro_item_dec">
-                    <p class="pro_dec_text">3,3',5,5'-四甲基联苯胺</p>
+                    <p class="pro_dec_text">{{$value.CName}}</p>
                     <p class="pro_dec_num">14 <span class="line"></span></p>
                     <span class="go_icon"></span>
                   </div>
                 </div>
-              </a>
-              <a href="#" class="">
-                <div class="pro_item">
-                  <div class="pro_item_pic">
-                    <img src="http://bek.com.cn/public/upload/product/2019/10/21/6f855e3f3a0e8b40d806718f93338003.png"
-                      alt="">
-                  </div>
-                  <div class="pro_item_dec">
-                    <p class="pro_dec_text">3,3',5,5'-四甲基联苯胺盐酸盐 </p>
-                    <p class="pro_dec_num">14 <span class="line"></span></p>
-                    <span class="go_icon"></span>
-                  </div>
-                </div>
-              </a>
-              <a href="#" class="">
-                <div class="pro_item">
-                  <div class="pro_item_pic">
-                    <img src="http://bek.com.cn/public/upload/product/2019/10/25/518f5bf7be5fc098e0a26ea7d9e23214.png"
-                      alt="">
-                  </div>
-                  <div class="pro_item_dec">
-                    <p class="pro_dec_text">3,3'5,5'-四甲基联苯胺丙磺酸钠</p>
-                    <p class="pro_dec_num">14 <span class="line"></span></p>
-                    <span class="go_icon"></span>
-                  </div>
-                </div>
-              </a>
-              <a href="#" class="">
-                <div class="pro_item">
-                  <div class="pro_item_pic">
-                    <img src="http://bek.com.cn/public/upload/product/2019/11/06/a5df0f715b7c09c3af938df9606eaad6.png"
-                      alt="">
-                  </div>
-                  <div class="pro_item_dec">
-                    <p class="pro_dec_text">3,3'5,5'-四甲基联苯胺硫酸盐</p>
-                    <p class="pro_dec_num">14 <span class="line"></span></p>
-                    <span class="go_icon"></span>
-                  </div>
-                </div>
-              </a>
-              <a href="#" class="">
-                <div class="pro_item">
-                  <div class="pro_item_pic">
-                    <img src="http://bek.com.cn/public/upload/product/2019/10/25/dc9117f98d40abd1bf7c70c07cb9eef0.png"
-                      alt="">
-                  </div>
-                  <div class="pro_item_dec">
-                    <p class="pro_dec_text">5-溴-6-氯-3-吲哚磷酸对甲苯胺盐</p>
-                    <p class="pro_dec_num">14 <span class="line"></span></p>
-                    <span class="go_icon"></span>
-                  </div>
-                </div>
-              </a>
-              <a href="#" class="">
-                <div class="pro_item">
-                  <div class="pro_item_pic">
-                    <img src="http://bek.com.cn/public/upload/product/2019/10/25/42b24db04b7e517852426a4bdaa01905.png"
-                      alt="">
-                  </div>
-                  <div class="pro_item_dec">
-                    <p class="pro_dec_text">氯化四唑蓝</p>
-                    <p class="pro_dec_num">14 <span class="line"></span></p>
-                    <span class="go_icon"></span>
-                  </div>
-                </div>
+                {{/each}}
               </a>
             </div>
+           
           </div>
-          <div class="tab_item">
+          <!-- <div class="tab_item">
             <div class="pro_item_box clearfix">
               <a href="#">
                 <div class="pro_item">
@@ -376,7 +318,7 @@
                 </div>
               </a>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -618,21 +560,22 @@
   });
   $(".pro_item").mouseover(function () {
     $(this).addClass("active").siblings().removeClass("active");
+   
   });
 
-  $(".tab_show a").on("touchstart mousedown", function (e) {
-    e.preventDefault();
+  $(".tab_show a").on("mousedown", function (e) {
     $(".tab_show .active").removeClass("active");
     $(this).addClass("active");
     $("#tabs_container .tab_item")
-      .eq($(this).index())
+      .eq($(this))
       .addClass("active")
       .siblings()
       .removeClass("active");
   });
   $(".tab_show a").click(function (e) {
-    e.preventDefault();
+    // return false;
   });
+
 </script>
 <!-- 环境展示 -->
 <script>
