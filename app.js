@@ -10,7 +10,7 @@ const base = require("./router/base")
 const news = require("./router/news")
 const contact = require("./router/contact")
 const app=express();
-const port=8080;
+const port=3000;
 
 //挂载express-session中间件
 app.use(expressSession({
@@ -24,7 +24,8 @@ app.use(expressSession({
 }));
 
 //使用mongoose.connect()方法连接数据库
-mongoose.connect('mongodb://localhost/beck');
+mongoose.connect("mongodb://localhost/beck");
+
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
@@ -46,7 +47,7 @@ app.use("/news",news)
 app.use("/contact",contact)
 
 
-
+// app.use(product)
 
 app.use((err,req,res,next)=>{
    res.send(err.message);
