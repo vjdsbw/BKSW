@@ -60,12 +60,9 @@ img {
     -webkit-background-size: cover;
     background-size: cover;
     left: 0;
-<<<<<<< HEAD
-    bottom: -0.51rem;
-=======
     top: 2.07rem;
     bottom: -0.05rem;
->>>>>>> a14f11a47e671a3884bf0fed4bad0b6f45077285
+
     position: absolute;
     padding-top: 0.36rem;
     z-index: 100;
@@ -119,6 +116,7 @@ a, a:link, a:hover, a:visited, a:active {
 
 .container {
     margin: 0 auto;
+   
 }
 .products_content .tab_container {
     padding-top: 1.5rem;
@@ -313,6 +311,11 @@ a, a:link, a:hover, a:visited, a:active {
 .color_g {
     color: #009140 !important;
 }
+img{
+    position: relative;
+    bottom: -12px;
+}
+
 
 
 /* @media screen and  (max-width: 767px){
