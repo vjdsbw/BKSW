@@ -60,8 +60,12 @@ else{
 });
 
 
-router.get("/product2", (req, res) => {
-  res.render("product2.html");
+router.get("/product2", async(req, res) => {
+console.log(req.query.img);
+var images = await Product.find({img:req.query.img});
+var image=images[0]
+console.log(image.CName);
+  res.render("product2.html",{image});
 });
 
 module.exports = router;
