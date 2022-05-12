@@ -2,6 +2,7 @@ const express = require("express");
 const Product = require("../model/product");
 const path = require("path");
 const mongoose = require("mongoose");
+const { CLIENT_RENEG_LIMIT } = require("tls");
 const router = express.Router();
 
 router.get("/product", async (req, res) => {
@@ -72,7 +73,7 @@ var images = await Product.find({id:req.query.id});
 var imagesp = await Product.find({id:req.query.id-1});
 // 因为req.query获得的返回值是字符串，直接加就变成了字符串拼接，这里减负值就会强制转换为number
 var imagesa = await Product.find({id:req.query.id-(-1)});
-
+console.log(images)
 var image=images[0];
 var imagep=imagesp[0];
 var imagea=imagesa[0];
@@ -80,6 +81,7 @@ var imagea=imagesa[0];
 console.log(image);
 console.log(imagep);
 console.log(imagea);
+console.log(image.img);
   res.render("product2.html",{image,imagep,imagea});
 });
 
