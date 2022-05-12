@@ -66,7 +66,11 @@ router.get("/product2", async(req, res) => {
 console.log(req.query.img);
 var images = await Product.find({img:req.query.img});
 var image=images[0]
-console.log(image.CName);
+console.log(image);
+var aa =await Product.find({ '_id': { '$lt': image._id } }).sort({_id: -1}).limit(1)
+var bb =await Product.find({ '_id': { '$gt': image._id } }).sort({_id: 1}).limit(1)
+console.log(aa);
+console.log(bb);
   res.render("product2.html",{image});
 });
 
