@@ -122,15 +122,14 @@
       </div>
       
       <div class="tab_show clearfix">
-        <a href="/index?page=sh" class="wow fadeInUp active" data-wow-delay="0.6s">生化检验</a>
-        <a href="/index?page=yy" class="wow fadeInUp" data-wow-delay="0.6s">医药中间体</a>
-        <a href="/index?page=cl" class="wow fadeInUp" data-wow-delay="0.6s">材料化学</a>
+        <a href="/index?page=sh#aaaaa" class="wow fadeInUp aaaaa" id="aaaaa" target="_self" data-wow-delay="0.6s">生化检验</a>
+        <a href="/index?page=yy#bbbbb" class="wow fadeInUp aaaaa"id="bbbbb" target="_self" data-wow-delay="0.6s">医药中间体</a>
+        <a href="/index?page=cl#ccccc" class="wow fadeInUp aaaaa"id="ccccc" target="_self" data-wow-delay="0.6s">材料化学</a>
       </div>
-      
+
       <div class="tab_container wow fadeInUp" data-wow-delay="1s">
         <div class="tab_box clearfix" id="tabs_container">
-
-          
+    
             <div class="tab_item active">
             <div class="pro_item_box clearfix">
               <a href="#" class="">
@@ -583,10 +582,17 @@
     this.prevBtn = $(".prev_btn");
     this.nextBtn = $(".next_btn");
     var list = $(".base_list_in li");
+    var lista = $(".aaaa");
     var _this = this;
     var showImg = $(".base_in_pic img");
     var showText = $(".base_in_text");
-
+    var a=window.location;
+    // var b= a.split('=')[1];
+    console.log(a);
+    lista.mouseenter(function () {
+      lista.removeClass("active");
+     this.addClass("active")
+    });
     list.mouseout(function () {
       list.removeClass("active");
     });
@@ -639,6 +645,9 @@
 </script>
 <script>
   new WOW().init();
+</script>
+<script type="text/javascript">
+
 </script>
 
 {{/block}}

@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const router = express.Router();
 
 router.get("/", async (req, res) => {
-   res.redirect("/index")
+   res.redirect("/index?page=sh")
 })
 
 router.get("/index", async(req, res) => {
