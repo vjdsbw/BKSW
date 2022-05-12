@@ -1,24 +1,26 @@
-{{extend './layout/center.html'}} 
-
-{{block "style"}}
+{{extend './layout/center.html'}} {{block "style"}}
 <link rel="stylesheet" href="/public/css/index.css" />
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
-<link rel="stylesheet" href="http://bek.com.cn/template/pc/style/css/swiper.min.css" />
-<link rel="stylesheet" href="http://bek.com.cn/template/pc/style/css/animate.min.css" />
+<link
+  rel="stylesheet"
+  href="http://bek.com.cn/template/pc/style/css/swiper.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="http://bek.com.cn/template/pc/style/css/animate.min.css"
+/>
 <!-- <link rel="stylesheet" href="http://bek.com.cn/template/pc/skin/css/common.css"> -->
 <link rel="stylesheet" href="/public/css/swiper.css" />
 
-{{/block}}
-
-{{block "content"}}
+{{/block}} {{block "content"}}
 
 <!-- 轮播图 -->
-<div id="banner" >
+<div id="banner">
   <div class="swiper-container">
     <ul class="swiper-wrapper">
       <li class="swiper-slide">
         <a href="javascript:;">
-          <img src="/public/img/index-lunbotu1.jpg"  alt="" />
+          <img src="/public/img/index-lunbotu1.jpg" alt="" />
         </a>
       </li>
       <li class="swiper-slide">
@@ -26,7 +28,7 @@
           <img src="/public/img/index-lunbotu2.jpg" alt="" />
         </a>
       </li>
-    </ul>  
+    </ul>
     <ul class="swiper-pagination">
       <li></li>
       <li></li>
@@ -38,9 +40,15 @@
 <div class="about_wrap">
   <div class="container">
     <div class="about">
-      <div class="about_top"> 
-        <h2 class="about_title wow fadeInUp animate__animated" data-wow-delay="0.3s"></h2>
-        <p class="about_dec wow fadeInUp animate__animated" data-wow-delay="0.5s">
+      <div class="about_top">
+        <h2
+          class="about_title wow fadeInUp animate__animated"
+          data-wow-delay="0.3s"
+        ></h2>
+        <p
+          class="about_dec wow fadeInUp animate__animated"
+          data-wow-delay="0.5s"
+        >
           苏州市贝克生物科技有限公司是一家入驻苏州新区高新技术创业中心的高科技企业。本公司有一批训练有素、经验丰富、实力雄厚的研制人员，从事以生物化学、医药化学和材料化学为主体的高新技术化学品的研究、开发、制造。积累了一批技术含量高、市场前景好的高科技产品和技术。
           这些产品已在生化检验、刑事侦破、环境监测、医药合成，以及液晶显示、电子工业等领域中获得了应用。苏州市贝克生物科技有限公司坚守&quot;质量，用户至上，热忱服务&quot;的准则。公司将以优良的产品和先进的技术为客户服务。承接高技术精细化学品的研制开发业务及相关的技术咨询业务。
         </p>
@@ -56,7 +64,6 @@
                     src="http://bek.com.cn/public/upload/images/2019/10/29/f35eacff35170a841b14a7784e0ea02e.jpg"
                     alt=""
                   />
-
                 </div>
               </div>
               <p class="about_list_name">环境展示</p>
@@ -69,7 +76,7 @@
                   <img
                     src="http://bek.com.cn/public/upload/images/2019/10/29/35a24e64d2d94a3982e5888e3d5fee10.jpg"
                     alt=""
-                  />  
+                  />
                 </div>
               </div>
               <p class="about_list_name">环境展示</p>
@@ -96,7 +103,6 @@
                     src="http://bek.com.cn/public/upload/images/2019/11/06/4d8beee36e213a4b73c79a5d7f8319a0.png"
                     alt=""
                   />
-
                 </div>
               </div>
               <p class="about_list_name">环境展示</p>
@@ -120,27 +126,47 @@
         <h2 class="products_title_en">PRODUCTS</h2>
         <p class="products_title_name">产品展示</p>
       </div>
-      
+
       <div class="tab_show clearfix">
-        <a href="/index?page=sh#aaaaa" class="wow fadeInUp aaaaa" id="aaaaa" target="_self" data-wow-delay="0.6s">生化检验</a>
-        <a href="/index?page=yy#bbbbb" class="wow fadeInUp aaaaa"id="bbbbb" target="_self" data-wow-delay="0.6s">医药中间体</a>
-        <a href="/index?page=cl#ccccc" class="wow fadeInUp aaaaa"id="ccccc" target="_self" data-wow-delay="0.6s">材料化学</a>
+        <a
+          href="/index"
+          class="wow fadeInUp aaaaa"
+          id="aaaaa"
+          target="_self"
+          data-wow-delay="0.6s"
+          >生化检验</a
+        >
+        <a
+          href="/index"
+          class="wow fadeInUp aaaaa"
+          id="bbbbb"
+          target="_self"
+          data-wow-delay="0.6s"
+          >医药中间体</a
+        >
+        <a
+          href="/index"
+          class="wow fadeInUp aaaaa"
+          id="ccccc"
+          target="_self"
+          data-wow-delay="0.6s"
+          >材料化学</a
+        >
       </div>
 
       <div class="tab_container wow fadeInUp" data-wow-delay="1s">
         <div class="tab_box clearfix" id="tabs_container">
-    
-            <div class="tab_item active">
+          <div class="tab_item active">
             <div class="pro_item_box clearfix">
               <a href="#" class="">
                 {{each products}}
                 <div class="pro_item">
                   <div class="pro_item_pic">
-                    <img src="/public/img/pro-img/{{$value.img}}"
-                      alt=""> 
+                    <img class="ajx" src="/public/img/pro-img/{{$value.img}}" alt="" />
                   </div>
+
                   <div class="pro_item_dec">
-                    <p class="pro_dec_text">{{$value.CName}}</p>
+                    <p class="bjx pro_dec_text">{{$value.CName}}</p>
                     <p class="pro_dec_num">14 <span class="line"></span></p>
                     <span class="go_icon"></span>
                   </div>
@@ -148,7 +174,6 @@
                 {{/each}}
               </a>
             </div>
-           
           </div>
           <!-- <div class="tab_item">
             <div class="pro_item_box clearfix">
@@ -329,14 +354,20 @@
     <div class="base_in clearfix">
       <div class="base_left right wow fadeInUp" data-wow-delay="0.5s">
         <div class="base_in_pic">
-
-          <img src="http://bek.com.cn/public/upload/images/2019/10/29/f35eacff35170a841b14a7784e0ea02e.jpg" alt="">
+          <img
+            src="http://bek.com.cn/public/upload/images/2019/10/29/f35eacff35170a841b14a7784e0ea02e.jpg"
+            alt=""
+          />
         </div>
         <div class="base_in_dec">
           <div class="base_in_text left">环境展示</div>
           <div class="base_in_handle right">
-            <a href="javascript:;" class="prev_btn"><span class="glyphicon glyphicon-arrow-left"></span></a>
-            <a href="javascript:;" class="next_btn"><span class="glyphicon glyphicon-arrow-right"></span></a>
+            <a href="javascript:;" class="prev_btn"
+              ><span class="glyphicon glyphicon-arrow-left"></span
+            ></a>
+            <a href="javascript:;" class="next_btn"
+              ><span class="glyphicon glyphicon-arrow-right"></span
+            ></a>
           </div>
         </div>
       </div>
@@ -345,45 +376,54 @@
           <h2>Environment Show</h2>
           <p>环境展示 <span class="base_line"></span></p>
         </div>
-        <div class="base_list ">
+        <div class="base_list">
           <ul class="base_list_in clearfix wow fadeInUp" data-wow-delay="0.6s">
-
             <li class="base_list_item active">
               <a href="javascript:;">
-                <img src="http://bek.com.cn/public/upload/images/2019/10/29/f35eacff35170a841b14a7784e0ea02e.jpg"
-                  alt="">
+                <img
+                  src="http://bek.com.cn/public/upload/images/2019/10/29/f35eacff35170a841b14a7784e0ea02e.jpg"
+                  alt=""
+                />
                 <p class="base_name">环境展示</p>
               </a>
             </li>
 
             <li class="base_list_item">
               <a href="javascript:;">
-                <img src="http://bek.com.cn/public/upload/images/2019/10/29/35a24e64d2d94a3982e5888e3d5fee10.jpg"
-                  alt="">
+                <img
+                  src="http://bek.com.cn/public/upload/images/2019/10/29/35a24e64d2d94a3982e5888e3d5fee10.jpg"
+                  alt=""
+                />
                 <p class="base_name">环境展示</p>
               </a>
             </li>
 
             <li class="base_list_item">
               <a href="javascript:;">
-                <img src="http://bek.com.cn/public/upload/images/2019/10/29/d40a1a804dbebc38376b5db2c5781d11.jpg"
-                  alt="">
+                <img
+                  src="http://bek.com.cn/public/upload/images/2019/10/29/d40a1a804dbebc38376b5db2c5781d11.jpg"
+                  alt=""
+                />
                 <p class="base_name">环境展示</p>
               </a>
             </li>
 
             <li class="base_list_item">
               <a href="javascript:;">
-                <img src="http://bek.com.cn/public/upload/images/2019/11/06/4d8beee36e213a4b73c79a5d7f8319a0.png"
-                  alt="">
+                <img
+                  src="http://bek.com.cn/public/upload/images/2019/11/06/4d8beee36e213a4b73c79a5d7f8319a0.png"
+                  alt=""
+                />
                 <p class="base_name">环境展示</p>
               </a>
             </li>
 
             <li class="base_list_item">
               <a href="javascript:;">
-                <img src="http://bek.com.cn/public/upload/images/2019/11/06/e6c12403339b963bab8de89a97eafec9.png"
-                  alt="">
+                <img
+                  src="http://bek.com.cn/public/upload/images/2019/11/06/e6c12403339b963bab8de89a97eafec9.png"
+                  alt=""
+                />
                 <p class="base_name">环境展示</p>
               </a>
             </li>
@@ -417,10 +457,10 @@
               <span class="time right">10-25</span>
             </div>
             <div class="news_item_bot">
-
-              <p class="dec"> 医药中间体，实际上是一些用于药品合成工...</p>
-              <span class="arrow"><span class="glyphicon glyphicon-arrow-right"></span></span>
-
+              <p class="dec">医药中间体，实际上是一些用于药品合成工...</p>
+              <span class="arrow"
+                ><span class="glyphicon glyphicon-arrow-right"></span
+              ></span>
             </div>
           </a>
         </li>
@@ -431,8 +471,12 @@
               <span class="time right">10-25</span>
             </div>
             <div class="news_item_bot">
-              <p class="dec">显色剂有两类：通用显色剂和特效显色剂。根据被检...</p>
-              <span class="arrow"><span class="glyphicon glyphicon-arrow-right"></span></span>
+              <p class="dec">
+                显色剂有两类：通用显色剂和特效显色剂。根据被检...
+              </p>
+              <span class="arrow"
+                ><span class="glyphicon glyphicon-arrow-right"></span
+              ></span>
             </div>
           </a>
         </li>
@@ -444,7 +488,9 @@
             </div>
             <div class="news_item_bot">
               <p class="dec">产品名称:间甲苯胺丙磺酸钠简称:TODP英文名...</p>
-              <span class="arrow"><span class="glyphicon glyphicon-arrow-right"></span></span>
+              <span class="arrow"
+                ><span class="glyphicon glyphicon-arrow-right"></span
+              ></span>
             </div>
           </a>
         </li>
@@ -456,7 +502,9 @@
             </div>
             <div class="news_item_bot">
               <p class="dec">Ⅰ、要求：1、有机化学、药物化学等与化学合成相...</p>
-              <span class="arrow"><span  class="glyphicon glyphicon-arrow-right"></span></span>
+              <span class="arrow"
+                ><span class="glyphicon glyphicon-arrow-right"></span
+              ></span>
             </div>
           </a>
         </li>
@@ -515,11 +563,7 @@
     </div>
   </div>
 </div>
-{{/block}} 
-
-
-
-{{block "script"}}
+{{/block}} {{block "script"}}
 <script src="/public/js/flexible.js"></script>
 <script src="/node_modules/jquery/dist/jquery.min.js"></script>
 <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
@@ -559,7 +603,6 @@
   });
   $(".pro_item").mouseover(function () {
     $(this).addClass("active").siblings().removeClass("active");
-   
   });
 
   $(".tab_show a").on("mousedown", function (e) {
@@ -574,7 +617,6 @@
   $(".tab_show a").click(function (e) {
     // return false;
   });
-
 </script>
 <!-- 环境展示 -->
 <script>
@@ -586,12 +628,12 @@
     var _this = this;
     var showImg = $(".base_in_pic img");
     var showText = $(".base_in_text");
-    var a=window.location;
+    var a = window.location;
     // var b= a.split('=')[1];
     console.log(a);
     lista.mouseenter(function () {
       lista.removeClass("active");
-     this.addClass("active")
+      this.addClass("active");
     });
     list.mouseout(function () {
       list.removeClass("active");
@@ -647,8 +689,88 @@
   new WOW().init();
 </script>
 <script type="text/javascript">
-
+  $("#aaaaa").click(function () {
+    var totalPage = $("#total").text();
+    console.log(totalPage);
+    $.ajax({
+      type: "GET",
+      url: "/aaa",
+      data: {
+        page: "sh",
+      },
+      contentType: "application/json",
+      success: function (res) {
+        var a = $(".ajx");
+        var b =$(".bjx");
+        if (res.code === 2002) {
+          for(var i=0;i<6;i++){
+            var key =res.message[i].img
+            var keyn=res.message[i].CName
+            a[i].src="http://localhost:3000/public/img/pro-img/"+key;
+            b[i].innerHTML=keyn
+          }
+        } else {
+          console.log(3);
+        }
+      },
+    });
+    return false;
+  });
+  $("#bbbbb").click(function () {
+    var totalPage = $("#total").text();
+    console.log(totalPage);
+    $.ajax({
+      type: "GET",
+      url: "/bbb",
+      data: {
+        page: "yy",
+      },
+      contentType: "application/json",
+      success: function (res) {
+        var a = $(".ajx");
+        var b =$(".bjx");
+        if (res.code === 2002) {
+          for(var i=0;i<6;i++){
+            var key =res.message[i].img
+            var keyn=res.message[i].CName
+            a[i].src="http://localhost:3000/public/img/pro-img/"+key;
+            b[i].innerHTML=keyn
+          }
+        } else {
+          console.log(3);
+        }
+      },
+    });
+    return false;
+  });
+  $("#ccccc").click(function () {
+    var totalPage = $("#total").text();
+    console.log(totalPage);
+    $.ajax({
+      type: "GET",
+      url: "/ccc",
+      data: {
+        page: "cl",
+      },
+      contentType: "application/json",
+      success: function (res) {
+        var a = $(".ajx");
+        var b =$(".bjx");
+        if (res.code === 2002) {
+          for(var i=0;i<6;i++){
+            var key =res.message[i].img
+            var keyn=res.message[i].CName
+            a[i].src="http://localhost:3000/public/img/pro-img/"+key;
+            b[i].innerHTML=keyn
+          }
+        } else {
+          console.log(3);
+        }
+      },
+    });
+    return false;
+  });
+  
 </script>
 
 {{/block}}
-

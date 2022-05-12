@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const productSchema = mongoose.Schema({
      Cas:{
          type:String,
-     },
+         },
         EName:{
         type:String
         },
@@ -25,9 +25,9 @@ const productSchema = mongoose.Schema({
             type:String
         },
         id:{
-               type:String
+            type:Number
        }
-         })
+       })
        
  const Product = mongoose.model("product",productSchema,"product");
  module.exports = Product;
