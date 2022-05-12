@@ -55,9 +55,7 @@
 }
 .footer_moudle .footer_moudle_top .erweima img {
     position: absolute;
-   
     left: 50%;
-    /* translate(x,y)水平方向和垂直方向同时移动（也就是X轴和Y轴同时移动） */
     transform: translate(-50%)
 }
 .footer_moudle .footer_moudle_top .erweima .line1{
@@ -80,9 +78,8 @@
     font-weight: 300;
     position: absolute;
     bottom: 35px;
-    left: 10px;
+    left: 0px;
 }
-
 
 
 /* 版权链接地址 */
@@ -107,8 +104,6 @@
     padding-right: 2px;
     padding-left: 2px;
 }
-
-
 
 /* 动画 */
 .footer_moudle_top_info {
