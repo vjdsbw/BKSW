@@ -2,11 +2,13 @@ const express = require("express");
 const  News= require("../model/news")
 const router = express.Router();
 
-router.get("/", (req, res) => {
-    res.redirect("/index")
-})
+// router.get("/", (req, res) => {
+//     res.redirect("/index")
+// })
 
 router.get("/index", (req, res) => {
+    var page = req.query.page;
+    console.log(page);
     res.render("index.html");
 })
 
