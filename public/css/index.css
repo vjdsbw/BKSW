@@ -698,7 +698,7 @@ input[type="text"] {
     position  : absolute;
     left      : 0;
     top       : -0rem;
-    z-index   : 1100;
+    z-index   : 1;
 }
 
 .contact_in .contact_tit {
