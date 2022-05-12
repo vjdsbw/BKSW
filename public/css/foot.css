@@ -1,0 +1,286 @@
+* {
+    padding:0;
+    margin: 0;
+}
+
+/* 底部 */
+.footer_moudle {
+    width: 100%;
+    height: auto;
+    min-height: 455px;
+    background: url('../img/footer_bg.png') no-repeat center;
+    background-size: cover;
+    color: #fff;
+    font-family: "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "宋体", simsun, sans-serif;
+    display: flex;
+    /* 纵向排列 */
+    flex-direction: column;
+}
+.footer_moudle a {
+    color: #fff;
+    text-decoration: none;
+}
+.footer_moudle dl p{
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+
+/* 上层公司信息 */
+.footer_moudle_top {
+    padding-top: 74px;
+}
+.footer_moudle_top .footer_moudle_top_info a {
+    display: inline-block;
+    position: relative;
+    padding-left: 10px;
+}
+.footer_moudle_top .footer_moudle_top_info a::before{
+    content: "";
+    width: 5px;
+    height: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    margin-top: -1.5px;
+    left: 0px; 
+}
+.footer_moudle .footer_moudle_top .footer_moudle_top_info dl dt {
+    margin-bottom: 30px;
+}
+.footer_moudle .footer_moudle_top .footer_moudle_top_info dl dd {
+    margin-bottom: 22px;
+}
+.footer_moudle .footer_moudle_top .erweima {
+    position: relative;
+}
+.footer_moudle .footer_moudle_top .erweima img {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%)
+}
+.footer_moudle .footer_moudle_top .erweima .line1{
+    width: 1px;
+    height: 276px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 35px;
+    right: 0px;
+}
+.footer_moudle .footer_moudle_top .erweima .line2{
+    width: 110px;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 35px;
+    right: 0px;
+}
+.footer_moudle .footer_moudle_top .erweima .zhiteng{
+    font-weight: 300;
+    position: absolute;
+    bottom: 35px;
+    left: 0px;
+}
+
+
+/* 版权链接地址 */
+.footer_moudle_bottom {
+    margin-top: 83px;
+}
+.footer_adr p{
+    margin-bottom: 0px;
+}
+.footer_adr {
+    min-height: 66px;
+    margin-top: 56px;
+    margin-bottom: 56px;
+    height: auto;
+    width: 100%;
+    background-color: rgba(255,255,255,0.2);   
+}
+.footer_adr .footer_adr_left p {
+    display: inline-block;
+}
+.footer_adr .footer_adr_right span{
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+/* 动画 */
+.footer_moudle_top_info {
+    animation-delay: 0.1s;
+}
+.footer_moudle_top_code {
+    animation-delay: 0.5s;
+}
+.footer_moudle_bottom{
+    animation-delay: 1.2s;
+}
+
+/* 版权链接地址 */
+@media (min-width:1200px){
+    .footer_adr_left,.footer_adr_right {
+        height: 66px;
+        line-height: 66px;
+    }
+    
+}
+@media (min-width:768px) and (max-width:1200px){
+    .footer_adr_left {
+        height: 66px;
+        line-height: 66px;
+    }
+    .footer_adr_right {
+        float: right;
+        height: 66px;
+        line-height: 66px;
+    } 
+
+}
+/* 0k */
+@media (min-width:500px) and (max-width:768px){
+    .footer_adr_left {
+       text-align: center;
+        line-height: 38px;
+        font-size: 12px;
+    }
+    .footer_adr_right {
+        text-align: center;
+        font-size: 12px;
+    }
+
+}
+@media (max-width:500px){
+    .footer_adr_left {
+        padding: 0px;
+    }
+    
+    .footer_adr_left,.footer_adr_right {
+        text-align: center;
+         line-height: 28px;
+         font-size: 12px;
+     }
+     .footer_adr .footer_adr_right span{
+        padding-right: 1px;
+        padding-left: 1px;
+    }
+     
+}
+
+/* 上层公司信息 */
+
+/* 大于等于990像素 */
+@media (min-width:990px){
+    .footer_moudle_top {
+        width: 100%;
+        min-height: 276px;
+        height: auto;
+        flex: 0 0 100%;
+        display: flex;
+        /* 横向排列 */
+        flex-direction: row;
+        font-size: 16px;
+    }
+    .footer_moudle_top .footer_moudle_top_info {
+        display: flex;
+        flex: 0 0 83.4%;
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+    }
+    .footer_moudle_top .footer_moudle_top_info dl{
+       flex: 0 0 20%;
+    }
+    .footer_moudle_top .footer_moudle_top_code {
+        display: flex;
+        flex-direction: row;
+        flex: 0 0 16.6%;
+    }
+
+    .footer_moudle_top .erweima {
+        flex: 0 0 100%;
+    }
+
+
+}
+/* 小于等于990像素 大于等于481像素*/
+@media (max-width:990px) and (min-width:481px){
+    .footer_moudle_top {
+        font-size: 13px;
+        width: 100%;
+        min-height: 276px;
+        height: auto;
+        flex: 0 0 100%;
+        display: flex;
+        /* 横向排列 */
+        flex-direction: row;
+        /* 父元素允许换行 */
+        flex-wrap: wrap;
+        /* 居中显示 */
+        align-content: center;
+        justify-items: center; 
+        
+    }
+    .footer_moudle_top .footer_moudle_top_info {
+        display: flex;
+        flex: 0 0 100%;
+        flex-direction: row;   
+    }
+    .footer_moudle_top .footer_moudle_top_info dl{
+       flex: 0 0 20%;
+       text-align: center;
+    }
+    .footer_moudle_top .footer_moudle_top_info dl p{
+        font-size: 16px;
+     }
+    .footer_moudle_top .footer_moudle_top_info dl a{
+        font-size: 14px;
+     }
+
+    .footer_moudle_top .footer_moudle_top_code {
+        display: flex;
+        flex-direction: row;
+        flex: 0 0 100%;
+        justify-content: center;
+        margin-bottom: 80px;
+    }
+    .footer_moudle_top .erweima {
+        display: flex;
+    }
+    .footer_moudle_top .line1,
+    .line2,
+    .zhiteng {
+        display: none;
+    }
+
+}
+
+/* 小于480像素 */
+@media (max-width:480px){
+
+    .footer_moudle_top .footer_moudle_top_info dl {
+        text-align: center;
+     }
+    
+    .footer_moudle_top .footer_moudle_top_info dl p{
+        font-size: 23px;
+     }
+    .footer_moudle_top .footer_moudle_top_info dl a{
+        font-size: 18px;
+        
+     }
+     .footer_moudle_top .footer_moudle_top_code {
+        display: flex;
+        flex-direction: row;
+        flex: 0 0 100%;
+        justify-content: center;
+        margin-bottom: 180px;
+    }
+    .footer_moudle_top .erweima {
+        display: flex;
+    }
+    .footer_moudle_top .line1,
+    .line2,
+    .zhiteng {
+        display: none;
+    }
+    
+}
