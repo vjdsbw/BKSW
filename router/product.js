@@ -21,7 +21,7 @@ if(req.query.page){
         },
       },
     ]);
-    console.log(result2);
+      console.log(result2);
     var totalPage = Math.ceil(result2[0].count / limit);
     res.render("product.html", {
       products: result,
