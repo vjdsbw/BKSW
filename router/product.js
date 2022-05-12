@@ -22,7 +22,14 @@ if(req.query.page){
       },
     ]);
     console.log(result2);
-    var totalPage = Math.ceil(result2[0].count / limit);
+    var totalPage;
+    // 根据page的不同类计算总页数
+    switch(req.query.page){
+      case 'sh':totalPage = Math.ceil(result2[2].count / limit);break;
+      case 'yy':totalPage = Math.ceil(result2[1].count / limit);break;
+      case 'cl':totalPage = Math.ceil(result2[0].count / limit);break;
+    }
+   console.log(totalPage);
     res.render("product.html", {
       products: result,
       totalPage: totalPage,
