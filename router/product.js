@@ -2,10 +2,10 @@ const express = require("express");
 const Product = require("../model/product");
 const path = require("path");
 const mongoose = require("mongoose");
-const { get } = require("http");
 const router = express.Router();
 
 router.get("/product", async (req, res) => {
+
     const { pageindex = 1 } = req.query;
   
 var limit=9;
@@ -53,21 +53,8 @@ else{
       totalPage: totalPage,
     });
 }
- 
-
-
 
 });
-
-
-
-
-
-
-
-
-
-
 
 
 router.get("/product2", (req, res) => {
