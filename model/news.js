@@ -12,9 +12,11 @@ frequency:{
 },
 content: {
     type: String,
+},
+num:{
+    type:String
 }
 })
-
 
 const News = mongoose.model("news",newsSchema,"news");
 module.exports = News;
