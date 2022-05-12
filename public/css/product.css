@@ -82,7 +82,7 @@ a:hover {
 }
 
 .tubiao {
-
+   
     position: absolute;
     left: 320px;
     bottom: 10px;
@@ -95,8 +95,8 @@ a:hover {
 }
 
 .bb {
-    width: 25px;
-    height: 25px;
+    width: 42px;
+    height: 42px;
 }
 
 #total .row div:hover .tubiao {
@@ -270,4 +270,5 @@ a:hover {
 
 .tubiaoail{
     display: block;
+    
 }

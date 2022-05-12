@@ -62,6 +62,10 @@ img {
     left: 0;
     top: 2.07rem;
     bottom: -0.05rem;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6de7b234ad08442472263868d92ea4e17593eadd
     position: absolute;
     padding-top: 0.36rem;
     z-index: 100;
@@ -115,6 +119,7 @@ a, a:link, a:hover, a:visited, a:active {
 
 .container {
     margin: 0 auto;
+   
 }
 .products_content .tab_container {
     padding-top: 1.5rem;
@@ -309,6 +314,11 @@ a, a:link, a:hover, a:visited, a:active {
 .color_g {
     color: #009140 !important;
 }
+img{
+    position: relative;
+    bottom: -12px;
+}
+
 
 
 /* @media screen and  (max-width: 767px){
