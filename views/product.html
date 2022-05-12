@@ -14,7 +14,7 @@
     <div class="container">
       <div class="pro_nav_title">
 
-        <h2 class="en">{{if !page1}}PRODUCTS{{/if}}</h2>
+        <h2 class="en">PRODUCTS</h2>
         <p class="name">{{if page1=='sh'}}
           生化检验
           {{else if page1=='yy'}}
@@ -43,7 +43,7 @@
     <div class="col-sm-6 col-md-4">
 
       <div class="thumbnail" style="border: none;">
-        <a href="/product/product2">
+        <a href="/product/product2?id={{$value.id}}">
           <img src="/public/img/pro-img/{{$value.img}}" alt="" class="aa"/>
         </a>
         <a href="" class="wenzi">{{$value.CName}}</a>
@@ -53,7 +53,7 @@
         <span class="line" id="hengxian"></span>
       </p>
       <span class="tubiao"
-        ><a href="/product/product2"
+        ><a href="/product/product2?id={{$value.id}}"
           ><img src="/public/img/pro-img/tubiao.png" alt="" class="bb"
         /></a>
       </span>

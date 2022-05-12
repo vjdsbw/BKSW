@@ -128,10 +128,32 @@
       </div>
 
       <div class="tab_show clearfix">
-       
-        <a href="" class="wow fadeInUp active" data-wow-delay="0.6s">生化检验</a>
-        <a href="" class="wow fadeInUp" data-wow-delay="0.6s">医药中间体</a>
-        <a href="" class="wow fadeInUp" data-wow-delay="0.6s">材料化学</a>
+
+        <a
+          href="/index"
+          class="wow fadeInUp aaaaa"
+          id="aaaaa"
+          target="_self"
+          data-wow-delay="0.6s"
+          >生化检验</a
+        >
+        <a
+          href="/index"
+          class="wow fadeInUp aaaaa"
+          id="bbbbb"
+          target="_self"
+          data-wow-delay="0.6s"
+          >医药中间体</a
+        >
+        <a
+          href="/index"
+          class="wow fadeInUp aaaaa"
+          id="ccccc"
+          target="_self"
+          data-wow-delay="0.6s"
+          >材料化学</a
+        >
+
       </div>
 
       <div class="tab_container wow fadeInUp" data-wow-delay="1s">
@@ -142,10 +164,12 @@
                 {{each products}}
                 <div class="pro_item">
                   <div class="pro_item_pic">
-                    <img src="/public/img/pro-img/{{$value.img}}" alt="" />
+
+                    <img class="ajx" src="/public/img/pro-img/{{$value.img}}" alt="" />
                   </div>
+
                   <div class="pro_item_dec">
-                    <p class="pro_dec_text">{{$value.CName}}</p>
+                    <p class="bjx pro_dec_text">{{$value.CName}}</p>
                     <p class="pro_dec_num">14 <span class="line"></span></p>
                     <span class="go_icon"></span>
                   </div>
@@ -426,27 +450,6 @@
   $(".tab_show a").click(function (e) {
     return false;
   });
-
-
-  $(function () {
-    $("#btn").click(function () {
-      $.ajax({
-          type:"get",
-          url:"/login",
-          data:'sh',
-          contentType:"application/json",
-          success:function(res){
-            if(res.code === 200){
-                console.log(res);
-            }
-            else{
-              console.log(message);     
-          }
-        }
-      })
-      return false;
-    })
-});
 </script>
 <!-- 环境展示 -->
 <script>
@@ -454,10 +457,17 @@
     this.prevBtn = $(".prev_btn");
     this.nextBtn = $(".next_btn");
     var list = $(".base_list_in li");
+    var lista = $(".aaaa");
     var _this = this;
     var showImg = $(".base_in_pic img");
     var showText = $(".base_in_text");
-
+    var a = window.location;
+    // var b= a.split('=')[1];
+    console.log(a);
+    lista.mouseenter(function () {
+      lista.removeClass("active");
+      this.addClass("active");
+    });
     list.mouseout(function () {
       list.removeClass("active");
     });
@@ -510,6 +520,90 @@
 </script>
 <script>
   new WOW().init();
+</script>
+<script type="text/javascript">
+  $("#aaaaa").click(function () {
+    var totalPage = $("#total").text();
+    console.log(totalPage);
+    $.ajax({
+      type: "GET",
+      url: "/aaa",
+      data: {
+        page: "sh",
+      },
+      contentType: "application/json",
+      success: function (res) {
+        var a = $(".ajx");
+        var b =$(".bjx");
+        if (res.code === 2002) {
+          for(var i=0;i<6;i++){
+            var key =res.message[i].img
+            var keyn=res.message[i].CName
+            a[i].src="http://localhost:3000/public/img/pro-img/"+key;
+            b[i].innerHTML=keyn
+          }
+        } else {
+          console.log(3);
+        }
+      },
+    });
+    return false;
+  });
+  $("#bbbbb").click(function () {
+    var totalPage = $("#total").text();
+    console.log(totalPage);
+    $.ajax({
+      type: "GET",
+      url: "/bbb",
+      data: {
+        page: "yy",
+      },
+      contentType: "application/json",
+      success: function (res) {
+        var a = $(".ajx");
+        var b =$(".bjx");
+        if (res.code === 2002) {
+          for(var i=0;i<6;i++){
+            var key =res.message[i].img
+            var keyn=res.message[i].CName
+            a[i].src="http://localhost:3000/public/img/pro-img/"+key;
+            b[i].innerHTML=keyn
+          }
+        } else {
+          console.log(3);
+        }
+      },
+    });
+    return false;
+  });
+  $("#ccccc").click(function () {
+    var totalPage = $("#total").text();
+    console.log(totalPage);
+    $.ajax({
+      type: "GET",
+      url: "/ccc",
+      data: {
+        page: "cl",
+      },
+      contentType: "application/json",
+      success: function (res) {
+        var a = $(".ajx");
+        var b =$(".bjx");
+        if (res.code === 2002) {
+          for(var i=0;i<6;i++){
+            var key =res.message[i].img
+            var keyn=res.message[i].CName
+            a[i].src="http://localhost:3000/public/img/pro-img/"+key;
+            b[i].innerHTML=keyn
+          }
+        } else {
+          console.log(3);
+        }
+      },
+    });
+    return false;
+  });
+  
 </script>
 
 {{/block}}

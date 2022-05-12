@@ -9,13 +9,35 @@ router.get("/", async (req, res) => {
    res.redirect("/index?page=sh")
 })
 
-
-router.get("/bbbbb",(re,res)=>{
-    console.log(req.body)
-    console.log(req.query)
-    res.send("xxxxxxx");
+router.get("/aaa", async (req, res, next) => {
+    var a=req.query;
+ console.log(a.page);
+ let result = await Product.find({page:a.page})
+         res.json({
+                code: 2002,
+                message: result
+         })
 })
-router.get("/index", async (req, res) => {
+router.get("/bbb", async (req, res, next) => {
+    var a=req.query;
+ console.log(a.page);
+ let result = await Product.find({page:a.page})
+         res.json({
+                code: 2002,
+                message: result
+         })
+})
+router.get("/ccc", async (req, res, next) => {
+    var a=req.query;
+ console.log(a.page);
+ let result = await Product.find({page:a.page})
+         res.json({
+                code: 2002,
+                message: result
+         })
+})
+ 
+router.get("/index", async(req, res) => {
     let result = await Product.find({page:req.query.page}).skip(0).limit(6);
     var page=req.query.page;
     switch(page){

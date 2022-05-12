@@ -166,10 +166,9 @@ a:hover {
 .pro_nav_title .name {
     display: inline-block;
     font-size: 30px;
-   
     position: absolute;
-    left: 30px;
-    top: 60px;
+    left: -10px;
+    top: 50px;
 }
     
 
