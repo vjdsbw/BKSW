@@ -588,11 +588,12 @@
 <script src="/public/js/swiper.js"></script>
 <!-- <script src="http://bek.com.cn/template/pc/style/js/common.js"></script> -->
 <script>
-  var swiper = new Swiper("#banner_in", {
+  var swiper = new Swiper(".swiper-container", {
     loop: "true",
     autoplay: {
       disableOnInteraction: false /*解决拖动之后图片仍然能够自动轮播的功能*/,
     },
+    effect: "slide",
     pagination: {
       el: ".swiper-pagination",
     },
@@ -696,17 +697,6 @@
 <script>
   new WOW().init();
 </script>
-<script>
-  var swiper = new Swiper(".swiper-container", {
-    loop: "true",
-    autoplay: {
-      disableOnInteraction: false /*解决拖动之后图片仍然能够自动轮播的功能*/,
-    },
-    effect: "slide",
-    pagination: {
-      el: ".swiper-pagination",
-    },
-  });
-</script>
+
 {{/block}}
 
