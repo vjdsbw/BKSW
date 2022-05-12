@@ -21,7 +21,7 @@ router.get("/about",(req,res)=>{
 
 router.get("/product",(req,res)=>{
     res.render("product.html")
-
+})
 router.get("/snews",(req,res)=>{
     res.render("news.html")
 
