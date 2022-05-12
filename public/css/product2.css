@@ -60,7 +60,12 @@ img {
     -webkit-background-size: cover;
     background-size: cover;
     left: 0;
+<<<<<<< HEAD
     bottom: -0.51rem;
+=======
+    top: 2.07rem;
+    bottom: -0.05rem;
+>>>>>>> a14f11a47e671a3884bf0fed4bad0b6f45077285
     position: absolute;
     padding-top: 0.36rem;
     z-index: 100;
@@ -146,6 +151,84 @@ a, a:link, a:hover, a:visited, a:active {
     max-width: 100%;
     max-height: 100%;
 }
+
+
+@media screen and  (max-width: 767px){
+    .container {
+        width: 100%;
+        padding: 0 0.1rem;
+    }
+    .products_content .tab_container {
+        padding-top: 0.8rem;
+    }
+    .pro_detail_top .pro_detail_pic {
+        width: 100%;
+        height: 4.3rem;
+        line-height: 4.3rem;
+    }
+}
+
+
+@media screen and (max-width: 479px) {
+    .tab_container {
+        padding-top: 0.2rem;
+    }
+}
+
+@media  (max-width: 767px) {
+    .pro_nav .pro_nav_title {
+        display: none;
+    }
+    .pro_nav {
+        background: #19b95f;
+        height:0.6rem;
+        padding-top: 0;
+        bottom: -0.6rem;
+    }
+    .pro_nav .pro_nav_tab {
+        text-align: center;
+        width: 100%;
+        position: relative;
+        top: -0.2rem;
+    }
+    .pro_nav .pro_nav_tab a{
+        margin-top: 0;
+        font-size: 16px;
+        height: 0.8rem;
+        line-height: 1rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 750px;
+    }
+    .pro_detail_top .pro_detail_pic {
+        width: 42%;
+        height: 4.3rem;
+        line-height: 4.3rem;
+    }
+    .detail_contact .contact_btn {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px){
+    .container {
+        width: 970px;
+    }
+    .pro_detail_top .pro_detail_pic {
+        width: 42%;
+    }
+   
+}
+
+@media screen and (min-width: 1200px){
+    .container {
+        width: 1000px;
+    }
+}
+
 .pro_detail_top .pro_detail_dec {
     width: 4rem;
     background: #f8f8f8;
@@ -232,7 +315,7 @@ a, a:link, a:hover, a:visited, a:active {
 }
 
 
-@media screen and  (max-width: 767px){
+/* @media screen and  (max-width: 767px){
     .container {
         width: 100%;
         padding: 0 0.1rem;
@@ -295,6 +378,6 @@ a, a:link, a:hover, a:visited, a:active {
     .container {
         width: 1000px;
     }
-}
+} */
 
 
