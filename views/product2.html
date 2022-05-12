@@ -18,9 +18,9 @@
                 <p class="name">酶免显色剂、底物系列</p>
             </div>
             <div class="pro_nav_tab">
-                <a href="#">生化检验</a>
-                <a href="#">医药中间体</a>
-                <a href="#">材料化学</a>
+                <a href="/product/product?pageindex=1&page=sh">生化检验</a>
+                <a href="/product/product?pageindex=1&page=yy">医药中间体</a>
+                <a href="/product/product?pageindex=1&page=cl">材料化学</a>
             </div>
         </div>
     </div>
@@ -79,10 +79,14 @@
 
         <!--翻页-->
         <div class="pro_detail_page">
-            <a class="page_item"><span>暂无</span>
-                <span class="color_d">PRO</span></a> 
-                <a href="/index.php/product/fgfd/30.html" class="page_item"> <span class="color_g">NEXT</span>
-                <span>3,3',5,5'-四甲基联苯胺盐酸盐 </span></a> </a>
+            <span class="color_d">PRO</span></a> 
+            {{if imagep}}  <a class="page_item" href="/product/product2?id={{imagep.id}}"><span> 
+                    <span>{{imagep.CName}} </span></a> 
+            {{else}}    暂无{{/if]}}</span>
+              
+                {{if imagea}}
+                <a href="/product/product2?id={{imagea.id}}" class="page_item"> <span class="color_g">NEXT</span>
+                <span>{{imagea.CName}}</span></a> </a>{{/if}}
         </div>
     </div>
 </div>

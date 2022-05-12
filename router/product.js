@@ -67,15 +67,20 @@ else{
 
 
 router.get("/product2", async(req, res) => {
-console.log(req.query.img);
-var images = await Product.find({img:req.query.img});
-var image=images[0]
+
+var images = await Product.find({id:req.query.id});
+var imagesp = await Product.find({id:req.query.id-1});
+// 因为req.query获得的返回值是字符串，直接加就变成了字符串拼接，这里减负值就会强制转换为number
+var imagesa = await Product.find({id:req.query.id-(-1)});
+
+var image=images[0];
+var imagep=imagesp[0];
+var imagea=imagesa[0];
+
 console.log(image);
-var aa =await Product.find({ '_id': { '$lt': image._id } }).sort({_id: -1}).limit(1)
-var bb =await Product.find({ '_id': { '$gt': image._id } }).sort({_id: 1}).limit(1)
-console.log(aa);
-console.log(bb);
-  res.render("product2.html",{image});
+console.log(imagep);
+console.log(imagea);
+  res.render("product2.html",{image,imagep,imagea});
 });
 
 module.exports = router;
