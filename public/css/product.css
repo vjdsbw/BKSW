@@ -1,3 +1,35 @@
+body {
+    font-family: "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "宋体", simsun, sans-serif;
+    font-size: 16px;
+    background: #fff;
+    color: #333333;
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+.pro_content_banner {
+    position: relative;
+}
+
+.pro_banner img {
+    width: 100%;
+}
+.container {
+    margin: 0 auto;
+}
+
+.pro_nav {
+    width: 100%;
+    height: 1.65rem;
+    background: url(../images/products/nav_bg.png) center center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    left: 0;
+    bottom: -0.83rem;
+    position: absolute;
+    padding-top: 0.36rem;
+    z-index: 0;
+}
 .aa {
     width: 358px;
     height: 358px;
@@ -25,7 +57,9 @@ img:hover {
     float: left;
     position: relative;
 }
-
+.pro_nav .pro_nav_title .name {
+    padding-left: 1.5rem;
+}
 .wenzi {
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -55,7 +89,7 @@ a:hover {
   display: block ;
 }
 
-bb {
+.bb {
     width: 25px;
     height: 25px;
 }
@@ -96,14 +130,21 @@ bb {
     width: 100%;
     height: 1.65rem;
     background: url("/public/img/nav_bg.png") center center no-repeat;
-    /* background-size: auto; */
-    /* -webkit-background-size: cover;*/
-    background-size: cover; 
+    background-size: auto;
+    /* -webkit-background-size: cover;
+    background-size: cover; */
     left: 0;
     bottom: -0.83rem;
     position: absolute;
     padding-top: 0.36rem;
-    
+    z-index: 0;
+}
+.pro_nav .pro_nav_title {
+    padding: 0 0 0 0.94rem;
+    float: left;
+    width: 5rem;
+    color: #fff;
+    font-size: 30px;
 }
 
 .pro_nav_title .en {
@@ -116,40 +157,27 @@ bb {
     position: relative;
 }
 
-.pro_nav_title .name {
-    display: inline-block;
-    font-size: 30px;
-    width: 2rem;
-    position: absolute;
-    left: 90px;
-    top: 40px;
+
+.pro_nav .pro_nav_title .name {
+    padding-left: 1.5rem;
+}
     
-}
 
-.pro_nav_tab {
-    width: 40%;
-    display: flex;
-    flex-direction: row;
-    flex: 0 0 100%;
-    position: absolute;
-    left: 45%;
-    top: 60%;
-}
-.pro_nav_tab a {
-    flex: 0 0 33.33%;
-    color: #fff;
-    font-size: 16px;
-    padding-top: 20px;
-    padding-bottom: 28px;
-}
 
-.pro_nav_tab a:hover {
+.pro_nav .pro_nav_tab {
+    float: left;
+}
+.pro_nav .pro_nav_tab a {
     display: inline-block;
-    /* width: 110px;
-    height: 50px; */
-    background-color: #2ee87e;
-    text-align: center;
-    background-image: linear-gradient(#049542,#2ee87e);
+    height: 1.04rem;
+    line-height: 1.2rem;
+    margin-top: 0.25rem;
+    color: #fff;
+    padding: 0 0.12rem;
+}
+
+.pro_nav .pro_nav_tab a.active, .pro_nav .pro_nav_tab a:hover {
+    background: url("/public/img/bg_line.png") repeat-x;
 }
 
 
@@ -158,19 +186,77 @@ bb {
     .pro_nav_title {
         display: none
     }
-    .pro_nav_tab {
+    .pro_nav {
+        background: #19b95f;
+        height: 0.6rem;
+        padding-top: 0;
+        bottom: -0.6rem;
+    }
+    
+    .pro_nav .pro_nav_tab a {
+        margin-top: 0;
+        font-size: 16px;
+        height: 0.8rem;
+        line-height: 1rem;
+    }
+    .container {
         width: 100%;
-        left: 40%;
-        top: 30%;
+        padding: 0 0.1rem;
+    }
+    .pro_nav .pro_nav_title {
+        display: none;
+    }
+    .pro_nav .pro_nav_tab{
+        position: absolute;
+        left:30%;
+        bottom:3px
+    }
+}
 
+@media (min-width: 768px) and (max-width: 991px){
+    .container {
+        width: 750px;
     }
-    .pro_nav_tab a {
-        display: nline-block;
-        height: auto;
-        flex: 0 0 20%;
-        font-size: 12px;
+    .pro_nav .pro_nav_title {
+        padding: 0;
+        width: 3.2rem;
+        margin-top: 0.14rem;
     }
-};
+    .pro_nav .pro_nav_title .en {
+        font-size: 30px;
+    }
+    .pro_nav .pro_nav_title .name {
+        font-size: 22px;
+        padding-left: 0.5rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .container {
+        width: 970px;
+    }
+    .pro_nav .pro_nav_title {
+        padding: 0;
+        width: 4.2rem;
+    }
+    .pro_nav .pro_nav_title {
+        padding: 0;
+        width: 4.2rem;
+    }
+}
+
+@media (min-width: 1200px){
+    .container {
+        width: 1170px;
+    }
+    .pro_nav .pro_nav_tab{
+        font-size: 20px;
+        position: absolute;
+        left:45%;
+        bottom: 12px;
+    }
+   
+}
 
 .tubiaoail{
     display: block;
