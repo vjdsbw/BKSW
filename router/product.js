@@ -2,6 +2,7 @@ const express = require("express");
 const Product = require("../model/product");
 const path = require("path");
 const mongoose = require("mongoose");
+const { CLIENT_RENEG_LIMIT } = require("tls");
 const router = express.Router();
 
 router.get("/product", async (req, res) => {
@@ -22,15 +23,21 @@ if(req.query.page){
       },
     ]);
 
+
   var page1=req.query.page;
-    var totalPage;
+
+
     // 根据page的不同类计算总页数
     switch(req.query.page){
       case 'sh':totalPage = Math.ceil(result2[2].count / limit);break;
       case 'yy':totalPage = Math.ceil(result2[1].count / limit);break;
       case 'cl':totalPage = Math.ceil(result2[0].count / limit);break;
     }
-   console.log(totalPage);
+
+
+
+   //console.log(totalPage);
+
 
     res.render("product.html", {
       products: result,
@@ -60,8 +67,16 @@ else{
 });
 
 
-router.get("/product2", (req, res) => {
-  res.render("product2.html");
+router.get("/product2", async(req, res) => {
+
+var images = await Product.find({id:req.query.id});
+var imagesp = await Product.find({id:req.query.id-1});
+// 因为req.query获得的返回值是字符串，直接加就变成了字符串拼接，这里减负值就会强制转换为number
+var imagesa = await Product.find({id:req.query.id-(-1)});
+var image=images[0];
+var imagep=imagesp[0];
+var imagea=imagesa[0];
+  res.render("product2.html",{image,imagep,imagea});
 });
 
 module.exports = router;

@@ -12,7 +12,7 @@ const contact = require("./router/contact")
 const app=express();
 const port=3000;
 
-//挂载express-session中间件
+//挂载express-session中间件nod
 app.use(expressSession({
     name:"mazg",
     secret:'secret',
