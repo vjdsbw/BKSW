@@ -1,13 +1,68 @@
 const express = require("express");
 const  News= require("../model/news")
+const Product = require("../model/product");
+const path = require("path");
+const mongoose = require("mongoose");
 const router = express.Router();
 
-router.get("/", (req, res) => {
-    res.redirect("/index")
+router.get("/", async (req, res) => {
+   res.redirect("/index?page=sh")
 })
 
-router.get("/index", (req, res) => {
-    res.render("index.html");
+router.get("/aaa", async (req, res, next) => {
+    var a=req.query;
+ console.log(a.page);
+ let result = await Product.find({page:a.page})
+         res.json({
+                code: 2002,
+                message: result
+         })
+})
+router.get("/bbb", async (req, res, next) => {
+    var a=req.query;
+ console.log(a.page);
+ let result = await Product.find({page:a.page})
+         res.json({
+                code: 2002,
+                message: result
+         })
+})
+router.get("/ccc", async (req, res, next) => {
+    var a=req.query;
+ console.log(a.page);
+ let result = await Product.find({page:a.page})
+         res.json({
+                code: 2002,
+                message: result
+         })
+})
+ 
+router.get("/index", async(req, res) => {
+    let result = await Product.find({page:req.query.page}).skip(0).limit(6);
+    var page=req.query.page;
+    switch(page){
+        case 'sh':result;break;
+        case 'yy':result;break;
+        case 'cl':result;break;
+      }
+    res.render("index.html",{products: result});
+})
+router.post("/get", (req, res) => {
+    console.log(req.query);
+    console.log(req.body);
+    if(req.body){
+        res.json({
+            code:200,
+            message:"chengong"
+        })
+    }
+    else{
+        res.json({
+        code:2000,
+        message:"false"
+    })
+}
+   
 })
 
 router.get("/contact",(req,res)=>{

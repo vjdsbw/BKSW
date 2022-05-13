@@ -60,8 +60,17 @@ img {
     -webkit-background-size: cover;
     background-size: cover;
     left: 0;
+<<<<<<< HEAD
     bottom: -0.51rem;
     top: 2.07rem;
+=======
+    top: 2.07rem;
+    bottom: -0.05rem;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6de7b234ad08442472263868d92ea4e17593eadd
+>>>>>>> 2874cd443f6ff45aab723bebc654cbcc9ba53a1d
     position: absolute;
     padding-top: 0.36rem;
     z-index: 100;
@@ -115,6 +124,7 @@ a, a:link, a:hover, a:visited, a:active {
 
 .container {
     margin: 0 auto;
+   
 }
 .products_content .tab_container {
     padding-top: 1.5rem;
@@ -309,6 +319,11 @@ a, a:link, a:hover, a:visited, a:active {
 .color_g {
     color: #009140 !important;
 }
+img{
+    position: relative;
+    bottom: -12px;
+}
+
 
 
 /* @media screen and  (max-width: 767px){
