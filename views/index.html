@@ -130,23 +130,25 @@
       <div class="tab_show clearfix">
 
         <a
-          href="/index"
+          href=""
           class="wow fadeInUp aaaaa"
           id="aaaaa"
           target="_self"
           data-wow-delay="0.6s"
+          rel="sh"
           >生化检验</a
         >
         <a
-          href="/index"
+          href=""
           class="wow fadeInUp aaaaa"
           id="bbbbb"
           target="_self"
           data-wow-delay="0.6s"
+          rel="yy"
           >医药中间体</a
         >
         <a
-          href="/index"
+          href=""
           class="wow fadeInUp aaaaa"
           id="ccccc"
           target="_self"
@@ -437,7 +439,7 @@
     $(this).addClass("active").siblings().removeClass("active");
   });
 
-  产品样式切换;
+  // 产品样式切换;
   $(".tab_show a").on("mousedown", function (e) {
     $(".tab_show .active").removeClass("active");
     $(this).addClass("active");
@@ -522,9 +524,14 @@
   new WOW().init();
 </script>
 <script type="text/javascript">
+var a = $("#aaaaa").attr("rel");
+console.log(a);
+var aasdf = $("#bbbbb").attr("rel");
+console.log(aasdf);
+
   $("#aaaaa").click(function () {
     var totalPage = $("#total").text();
-    console.log(totalPage);
+    // console.log(totalPage);
     $.ajax({
       type: "GET",
       url: "/aaa",
@@ -534,11 +541,13 @@
       contentType: "application/json",
       success: function (res) {
         var a = $(".ajx");
+        console.log(a);
         var b =$(".bjx");
         if (res.code === 2002) {
           for(var i=0;i<6;i++){
             var key =res.message[i].img
             var keyn=res.message[i].CName
+            
             a[i].src="http://localhost:3000/public/img/pro-img/"+key;
             b[i].innerHTML=keyn
           }

@@ -11,7 +11,7 @@ router.get("/", async (req, res) => {
 
 router.get("/aaa", async (req, res, next) => {
     var a=req.query;
- console.log(a.page);
+//  console.log(a.page);
  let result = await Product.find({page:a.page})
          res.json({
                 code: 2002,
@@ -20,7 +20,7 @@ router.get("/aaa", async (req, res, next) => {
 })
 router.get("/bbb", async (req, res, next) => {
     var a=req.query;
- console.log(a.page);
+//  console.log(a.page);
  let result = await Product.find({page:a.page})
          res.json({
                 code: 2002,
