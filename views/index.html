@@ -495,6 +495,7 @@
   new WOW().init();
 </script>
 <script type="text/javascript">
+
   $(".aaaaa").click(function () {
     // console.log(this.rel);
     var rel=this.rel;
@@ -509,11 +510,13 @@
       contentType: "application/json",
       success: function (res) {
         var a = $(".ajx");
+        console.log(a);
         var b =$(".bjx");
         if (res.code === 2002) {
           for(var i=0;i<6;i++){
             var key =res.message[i].img
             var keyn=res.message[i].CName
+            
             a[i].src="http://localhost:3000/public/img/pro-img/"+key;
             b[i].innerHTML=keyn
           }
