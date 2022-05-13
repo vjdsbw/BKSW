@@ -9,6 +9,15 @@ router.get("/", async (req, res) => {
    res.redirect("/index?page=sh")
 })
 
+router.get("/aaa", async (req, res, next) => {
+    var a=req.query;
+    console.log(a.page);
+    let result = await Product.find({page:a.page})
+         res.json({
+                code: 2002,
+                message: result
+        })
+})
 router.get("/index", async(req, res) => {
     let result = await Product.find({page:req.query.page}).skip(0).limit(6);
     var rel=req.query;
@@ -20,6 +29,23 @@ router.get("/index", async(req, res) => {
         case 'cl':result;break;
       }
     res.render("index.html",{products: result});
+})
+router.post("/get", (req, res) => {
+    console.log(req.query);
+    console.log(req.body);
+    if(req.body){
+        res.json({
+            code:200,
+            message:"chengong"
+        })
+    }
+    else{
+        res.json({
+        code:2000,
+        message:"false"
+    })
+}
+   
 })
 
 router.get("/contact",(req,res)=>{
