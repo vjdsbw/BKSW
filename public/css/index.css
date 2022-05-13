@@ -846,6 +846,31 @@ input[type="text"] {
     body {
         font-size: 12px;
     }
+    .about .about_dec{
+        font: size 14px;
+        margin-bottom: 10px;
+    }
+    .about_list_box{
+        padding: 0 50px 0 50px;
+    }
+    .about_list_box .about_list {
+        margin: 0;
+    }
+    .about_list_box .about_list_item {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+    .tab_show {
+        padding: 0;
+    }
+    .tab_show a {
+        width: 46%;
+        margin-bottom: 15px;
+    }
+    .tab_container .pro_item {
+        width: 100%;
+        margin: 0 auto;
+    }
 
     .contact_in .contact_type_item {
         width       : 100%;
