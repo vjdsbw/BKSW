@@ -11,32 +11,13 @@ router.get("/", async (req, res) => {
 
 router.get("/aaa", async (req, res, next) => {
     var a=req.query;
- console.log(a.page);
- let result = await Product.find({page:a.page})
+    console.log(a.page);
+    let result = await Product.find({page:a.page})
          res.json({
                 code: 2002,
                 message: result
-         })
+        })
 })
-router.get("/bbb", async (req, res, next) => {
-    var a=req.query;
- console.log(a.page);
- let result = await Product.find({page:a.page})
-         res.json({
-                code: 2002,
-                message: result
-         })
-})
-router.get("/ccc", async (req, res, next) => {
-    var a=req.query;
- console.log(a.page);
- let result = await Product.find({page:a.page})
-         res.json({
-                code: 2002,
-                message: result
-         })
-})
- 
 router.get("/index", async(req, res) => {
     let result = await Product.find({page:req.query.page}).skip(0).limit(6);
     var page=req.query.page;
