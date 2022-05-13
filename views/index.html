@@ -128,32 +128,9 @@
       </div>
 
       <div class="tab_show clearfix">
-
-        <a
-          href="/index"
-          class="wow fadeInUp aaaaa"
-          id="aaaaa"
-          target="_self"
-          data-wow-delay="0.6s"
-          >生化检验</a
-        >
-        <a
-          href="/index"
-          class="wow fadeInUp aaaaa"
-          id="bbbbb"
-          target="_self"
-          data-wow-delay="0.6s"
-          >医药中间体</a
-        >
-        <a
-          href="/index"
-          class="wow fadeInUp aaaaa"
-          id="ccccc"
-          target="_self"
-          data-wow-delay="0.6s"
-          >材料化学</a
-        >
-
+        <a href="" class="wow fadeInUp aaaaa active" rel="sh"  target="_self" data-wow-delay="0.6s">生化检验</a>
+        <a href="" class="wow fadeInUp aaaaa" rel="yy"  target="_self" data-wow-delay="0.6s">医药中间体</a>
+        <a href="" class="wow fadeInUp aaaaa" rel="cl"  target="_self" data-wow-delay="0.6s">材料化学</a>
       </div>
 
       <div class="tab_container wow fadeInUp" data-wow-delay="1s">
@@ -164,10 +141,8 @@
                 {{each products}}
                 <div class="pro_item">
                   <div class="pro_item_pic">
-
                     <img class="ajx" src="/public/img/pro-img/{{$value.img}}" alt="" />
                   </div>
-
                   <div class="pro_item_dec">
                     <p class="bjx pro_dec_text">{{$value.CName}}</p>
                     <p class="pro_dec_num">14 <span class="line"></span></p>
@@ -399,11 +374,9 @@
 <script src="/public/js/flexible.js"></script>
 <script src="/node_modules/jquery/dist/jquery.min.js"></script>
 <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
-<!-- <script src="/public/js/swiper.min.js"></script> -->
 <script src="http://bek.com.cn/template/pc/style/js/swiper.jquery.min.js"></script>
 <script src="http://bek.com.cn/template/pc/style/js/wow.min.js"></script>
 <script src="/public/js/swiper.js"></script>
-<!-- <script src="http://bek.com.cn/template/pc/style/js/common.js"></script> -->
 <script>
   var swiper = new Swiper(".swiper-container", {
     loop: "true",
@@ -437,7 +410,7 @@
     $(this).addClass("active").siblings().removeClass("active");
   });
 
-  产品样式切换;
+  // 产品样式切换;
   $(".tab_show a").on("mousedown", function (e) {
     $(".tab_show .active").removeClass("active");
     $(this).addClass("active");
@@ -522,14 +495,16 @@
   new WOW().init();
 </script>
 <script type="text/javascript">
-  $("#aaaaa").click(function () {
-    var totalPage = $("#total").text();
-    console.log(totalPage);
+  $(".aaaaa").click(function () {
+    // console.log(this.rel);
+    var rel=this.rel;
+    // console.log(rel);
+    // console.log(totalPage);
     $.ajax({
       type: "GET",
       url: "/aaa",
       data: {
-        page: "sh",
+        page: rel,
       },
       contentType: "application/json",
       success: function (res) {
@@ -548,62 +523,7 @@
       },
     });
     return false;
-  });
-  $("#bbbbb").click(function () {
-    var totalPage = $("#total").text();
-    console.log(totalPage);
-    $.ajax({
-      type: "GET",
-      url: "/bbb",
-      data: {
-        page: "yy",
-      },
-      contentType: "application/json",
-      success: function (res) {
-        var a = $(".ajx");
-        var b =$(".bjx");
-        if (res.code === 2002) {
-          for(var i=0;i<6;i++){
-            var key =res.message[i].img
-            var keyn=res.message[i].CName
-            a[i].src="http://localhost:3000/public/img/pro-img/"+key;
-            b[i].innerHTML=keyn
-          }
-        } else {
-          console.log(3);
-        }
-      },
-    });
-    return false;
-  });
-  $("#ccccc").click(function () {
-    var totalPage = $("#total").text();
-    console.log(totalPage);
-    $.ajax({
-      type: "GET",
-      url: "/ccc",
-      data: {
-        page: "cl",
-      },
-      contentType: "application/json",
-      success: function (res) {
-        var a = $(".ajx");
-        var b =$(".bjx");
-        if (res.code === 2002) {
-          for(var i=0;i<6;i++){
-            var key =res.message[i].img
-            var keyn=res.message[i].CName
-            a[i].src="http://localhost:3000/public/img/pro-img/"+key;
-            b[i].innerHTML=keyn
-          }
-        } else {
-          console.log(3);
-        }
-      },
-    });
-    return false;
-  });
-  
+  });  
 </script>
 
 {{/block}}
