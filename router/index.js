@@ -4,15 +4,16 @@ const Product = require("../model/product");
 const path = require("path");
 const mongoose = require("mongoose");
 const router = express.Router();
-
+// /index?page=sh
 router.get("/", async (req, res) => {
-   res.redirect("/index")
+   res.redirect("/index?page=sh")
 })
 
 router.get("/index", async(req, res) => {
     let result = await Product.find({page:req.query.page}).skip(0).limit(6);
+    var rel=req.query;
+    // console.log(rel)
     var page=req.query.page;
-    // console.log(page)
     switch(page){
         case 'sh':result;break;
         case 'yy':result;break;
